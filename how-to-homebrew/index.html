@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awseome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <link rel="stylesheet" href="../plugins/normalize.min.css">
+    <link rel="stylesheet" href="../plugins/animate.min.css">
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/howto.css" />
+  </head>
+  <body>
+    
+    <nav id="nav-bar">
+      
+      <ul >
+        <li class="logo"><a href="../index.html">HomeBrew</a></li>
+      </ul>
+
+      <ul class="nav-menu">
+
+        <li><a href="../our-story/index.html">Our Story</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="../boxes/index.html">Boxes</a></li>
+        <li><a href="../how-to-homebrew/index.html">How to HomeBrew</a></li>
+        <li class="subscribe-btn"><a id="demo01" href="#animatedModal">Subscribe</a></li>
+      </ul>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+  </div>
+    </nav>
+
+    <main>
+      
+        <h1>How to HomeBrew</h1>
+        
+        <iframe class="video"
+        width="75%"
+        height="300"
+        src="https://www.youtube.com/embed/AVV3UJCFnA4"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        ></iframe>
+        <p>Find out just how easy it is to HomeBrew, through brewing Guru, Joshua Weissmann!</p>
+      
+        <section class="subscribe ">
+        <div>
+          <p class="newsletter-title">
+            News, Recipes & much more!
+          </p>
+          <form class="input newsletter-form">
+            <input
+            id="email"
+            name="email"
+            type="email" 
+            placeholder="Your email"
+            required>
+            <input 
+            type="button"
+            value="Submit"
+            />
+          </form>
+        </div>
+    </main>
+    
+  <footer class="footer gradient">
+    <div class="l-footer">
+    <h2>
+    Homebrew</h2>
+    </div>
+    <ul class="r-footer">
+    <li>
+      <h2>
+    Social</h2>
+    <ul class="box">
+      
+    <li><a href="https://twitter.com " target="_blank"><picture><img src="../Images/Twitter.png"></picture></a></li>
+    <li><a href="https://en-gb.facebook.com/login.php" target="_blank"><picture><img src="../Images/facebook-512.png"></picture></a></li>
+    <li><a href="https://www.instagram.com/" target="_blank"><picture><img src="../Images/Instagram.png"></picture></a></li>
+  
+    </ul>
+    </li>
+    <li class="features">
+      <h2>
+    Links</h2>
+    <ul class="box h-box">
+    <li><a href="../our-story/index.html">Our Story</a></li>
+    <li><a href="#">Shop</a></li>
+    <li><a href="../boxes/index.html">Boxes</a></li>
+    <li><a href="../how-to-homebrew/index.html">How to HomeBrew</a></li>
+    <li><a href="#">Subscribe</a></li>
+    </ul>
+    </li>
+    <li>
+      <h2>
+    Features</h2>
+    <ul class="box">
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Press</a></li>
+    <li><a href="#">Careers</a></li>
+    </ul>
+    </li>
+    </ul>
+    <div class="b-footer">
+    <p>
+    Copyright ©HomeBrew 2021 </p>
+    </div>
+    
+            <div id="bubbles">
+      <div class="bubble x1"></div>
+      <div class="bubble x2"></div>
+      <div class="bubble x3"></div>
+      <div class="bubble x4"></div>
+    </div>
+
+  </div>
+    </footer>
+
+
+<!-- animated modal -->
+<div id="animatedModal">
+  <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+  <div class="close-animatedModal"> 
+    Close
+  </div>
+  
+  <div class="modal-content  ">
+    <div class=" modal-flex">
+      <img src="../Images/Circusbeer.JPG" alt="" class="modal-img">
+      </div>
+      <div>
+      <h1> Get 20% off your first box
+      </h1>
+      
+      <p>Subscribe today and join a growing community of brewers and beer lovers</p>
+
+      <form action="" method="get">
+        <div class="">
+          <label for="email">Email *</label>
+          <input type="email" name="email" id="email"
+          placeholder="Email Address" required />
+        </div>
+
+        <div class="">
+          <label for="Name">Name *</label>
+          <input type="text" name="name" id="name"
+          placeholder="Name" required />
+        </div>
+      
+       <div class="">
+        <label for="address">First line of Address *</label>
+        <input type="address" name="address" id="address" placeholder="Address" required />
+      </div>
+
+      <div>
+
+        <label for="Products">Choose which HomeBrew Products you are interested in </label>
+        <select name="products" id="products">
+          
+          
+          <optgroup>
+            <option value="products">
+              Choose one
+            </option>
+          </optgroup>
+          <optgroup>
+            <option value="products">Starter Kits</option>
+            <option value="products">Brewing Boxes</option>
+            <option value="products">HomeBrew Beer Boxes</option>    
+          </optgroup>
+        </select>
+      </div>
+
+        <div>
+           <input type="submit" value="Start HomeBrewing Now!" />
+         </div>
+       </div>
+      </div> 
+      
+    </div>
+  </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="../plugins/animatedModal.min.js"></script>
+  <script> $("#demo01").animatedModal();</script>
+    <script src="../Scripts/index.js"></script>
+  </body>
+</html>
