@@ -24,8 +24,8 @@ p {
   padding: 1px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   iframe {
-    height: 250;
+    height: 300;
   }
 }
