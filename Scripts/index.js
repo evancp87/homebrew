@@ -13,22 +13,6 @@ function mobileMenu() {
 
 
 
-
-// on scroll function to get nav bar to disappear. it worked originally, but then suddenly stopped working and i don't know why
-// window.onscroll = function() {
-//   let currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     document.getElementById("nav-bar").style.top = "0";
-//   } else {
-//     document.getElementById("nav-bar").style.top = "-80px";
-//   }
-//   prevScrollpos = currentScrollPos;
-// }
-
-
-
-
-
 // on scroll events
 
 
@@ -75,7 +59,17 @@ window.addEventListener("scroll", () => {
 
 
 
+  let prevScrollpos = 0;
 
+  window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("nav-bar").style.top = "0";
+    } else {
+      document.getElementById("nav-bar").style.top = "-80px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
 
 
 
