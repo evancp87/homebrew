@@ -21,6 +21,10 @@ button {
   justify-content: center;
 }
 
+h2 {
+  font-size: 1.5em;
+}
+
 .main-carousel {
   background: #eee;
   width: 300px;
@@ -91,6 +95,12 @@ button:last-of-type {
   justify-content: center;
 }
 
+@media only screen and (max-width: 600px) {
+  .grid-column {
+    margin-top: 20px;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   section {
     display: flex;
@@ -101,9 +111,10 @@ button:last-of-type {
     display: flex;
     flex-direction: row;
   }
+}
 
-  /* .grid-half {
-    max-width: 100%;
-    justify-content: center;
-  } */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  section {
+    flex-wrap: wrap;
+  }
 }

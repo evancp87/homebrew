@@ -840,4 +840,10 @@ section:first-of-type {
     flex-grow: 1;
     margin: 5px;
   }
+  .logo {
+    font-weight: 700;
+    padding: 3px 10px 7.5px 0;
+    justify-content: center;
+    font-size: 2rem;
+  }
 }
