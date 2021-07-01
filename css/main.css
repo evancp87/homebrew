@@ -356,9 +356,6 @@ p.header-text {
 nav ul {
   display: flex;
   margin: 10px;
-  /* justify-content: space-around; */
-
-  /* flex: 0 1 40rem; */
 }
 
 nav ul li {
@@ -555,6 +552,7 @@ section:first-of-type {
     display: flex;
     height: auto;
     width: 100%;
+    justify-content: space-between;
     background-color: var(--amber);
     z-index: 5;
     padding: 0 15px;
@@ -580,7 +578,7 @@ section:first-of-type {
   nav ul {
     display: flex;
     margin: 10px;
-    flex: 0 1 40rem;
+    flex-wrap: wrap;
   }
 
   nav li {
