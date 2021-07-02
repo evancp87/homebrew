@@ -120,6 +120,7 @@ svg {
 .modal-content {
   display: flex;
   flex-direction: column;
+  padding-left: 2em;
 }
 
 .modal-flex {
@@ -136,12 +137,42 @@ svg {
   flex-direction: center;
 }
 
+.form-item {
+  margin: 30px 20px 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-item input {
+  padding-left: 62px;
+}
+
+label {
+  margin-right: 35px;
+}
+
+input[type="submit"] {
+  padding: 0.4em;
+  background-color: var(--amber);
+  box-shadow: 5px 5px 0 rgba(15, 15, 15, 0.5);
+}
+
+input[type="submit"]:hover {
+  padding: 0.4em;
+  box-shadow: 1px 1px 0 rgba(15, 15, 15, 0.5);
+  transition: all 0.5s ease;
+}
+
+/* modal pop up styling ends */
+
 .about {
   display: flex;
   display: inline-block;
   text-align: center;
 }
 
+/* for Javascript image transistions */
 .js-scroll {
   opacity: 0;
   transition: opacity 500ms;
@@ -534,6 +565,12 @@ section:first-of-type {
       opacity: 1;
     }
   }
+
+  .logo:hover {
+    color: white;
+    text-decoration: underline;
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -807,13 +844,22 @@ section:first-of-type {
     justify-content: center;
     text-align: center;
     margin: 0 auto;
-    padding: 100px;
+    padding: 3em;
   }
 
   .modal-flex img {
     max-width: 500px;
     height: auto;
   }
+
+  .modal-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2em;
+  }
+
+  /* Modal styling ends */
 
   .subscribe-btn {
     background-color: white;
@@ -843,5 +889,14 @@ section:first-of-type {
     padding: 3px 10px 7.5px 0;
     justify-content: center;
     font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  /* for modal pop up tablets*/
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3em;
   }
 }
