@@ -127,7 +127,7 @@
       <section class="stories">
         <ul>
           <li class="img-wrap"><img src="./Images/carousel1.jpg" alt="Beers lined up">
-            <p class="img-description">"I never knew it was so easy to brew beer before i tried HomeBrew!" -James, Brighton</p></li>
+            <p class="img-description">"I never knew it was so easy to brew before i tried HomeBrew!" -James, Brighton</p></li>
             
             <li class="img-wrap"><img src="./Images/carousel2 .JPG" alt="Friends Drinking"><p class="img-description">"Great value for money" -Karl, Newcastle</p></li>
             
@@ -136,9 +136,9 @@
               
             <li class="img-wrap"><img src="./Images/carousel4.JPG" alt="Friends Drinking in Park"><p class="img-description">"I don't think i'll ever be able to buy supermarket beer ever again!" -Christina, London</p></li>
             
-            <li class="img-wrap"><img src="./Images/carousel8.JPG" alt="A gathering of friends"><p class="img-description">"What started as a lockdown hobby has now taken off as a business!" -Christos, London</p></li>
+            <li class="img-wrap"><img src="./Images/carousel8.JPG" alt="A gathering of friends"><p class="img-description">"What started as a hobby has now taken off as a business!" -Christos, London</p></li>
             
-            <li class="img-wrap"><img src="./Images/carousel6.JPG" alt="Dinner party"><p class="img-description">"Never dreamed of brewing beer before, thanks for opening my eyes!" -Jasmine, London</p></li>
+            <li class="img-wrap"><img src="./Images/carousel6.JPG" alt="Dinner party"><p class="img-description">"Never dreamed of brewing before, thanks for opening my eyes!" -Jasmine, London</p></li>
             
             <li class="img-wrap"><img src="./Images/carousel5.JPG" alt="Canary Wharf Skyline"><p class="img-description">"Easy to use, and i've made great beer" -Craig, Manchester</p></li>
             
@@ -152,11 +152,9 @@
         
         <section class="subscribe">
           <div>
-            <p class="newsletter-title">
-              News, Recipes & much more!
-            </p>
-            <form class="input newsletter-form">
-              <label for="email"></label>
+    
+            <form class="input">
+              <label for="email">News, Recipes & much more!</label>
               <input
               id="email"
               name="email"
@@ -190,7 +188,7 @@
   <li>
     <h2>
   Social</h2>
-  <ul class="box">
+  <ul class="box social-media">
     
   <li><a href="https://twitter.com/?lang=en-gb" target="_blank"><picture><img src="./Images/Twitter.png"></picture></a></li>
   <li><a href="https://www.facebook.com/" target="_blank"><picture><img src="./Images/facebook-512.png"></picture></a></li>
@@ -308,7 +306,55 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="./plugins/animatedModal.min.js"></script>
     <script> $("#demo01").animatedModal();</script>
-    
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+
+<script>
+  /* paste this in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments);};
+
+  /* customize formbutton here*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/xqkwlywy",
+    title: "How can we help?",
+    description: "We'll be in touch asap",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "Email Address"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "Type your message"
+      },
+      { type: "submit" }
+    ],
+    styles: {
+      modal: {
+        background: "#e6b515"
+      },
+      formStatus: {
+        background: "#e6b515"
+      },
+      input: {
+        border: "1px solid #CCC",
+        padding: "5px",
+        lineHeight: "1.25"
+      },
+      submitInput: {padding: "0.75em 1em"},
+      fontFamily:'"Rubik", sans-serif',
+      button: {
+        background: "#e6b515"
+      }
+      
+    },
+    initiallyVisible: true
+  });
+</script>
     <script src="./Scripts/index.js"></script>
     
    

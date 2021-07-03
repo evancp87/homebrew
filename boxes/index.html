@@ -130,11 +130,9 @@
             </div>
           </section>
           <section class="subscribe">
-            <div>
-              <p class="newsletter-title">
-                News, Recipes & much more!
-              </p>
-              <form class="input newsletter-form">
+            <div>             
+              <form class="input">
+                <label for="email">News, Recipes & much more!</label>
                 <input
                 id="email"
                 name="email"
@@ -161,7 +159,7 @@
       <li>
         <h2>
       Social</h2>
-      <ul class="box">
+      <ul class="box social-media">
         
       <li><a href="https://twitter.com/?lang=en-gb" target="_blank"><picture><img src="../Images/Twitter.png"></picture></a></li>
       <li><a href="https://www.facebook.com/" target="_blank"><picture><img src="../Images/facebook-512.png"></picture></a></li>
@@ -274,6 +272,48 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="../plugins/animatedModal.min.js"></script>
   <script> $("#demo01").animatedModal();</script>
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+
+<script>
+  /* paste this in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments);};
+
+  /* customize formbutton here*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/xqkwlywy",
+    title: "How can we help?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+      },
+      { type: "submit" }
+    ],
+    styles: {
+      modal: {
+        background: "#e6b515"
+      },
+      formStatus: {
+        background: "#e6b515"
+      },
+      input: {
+        border: "1px solid #CCC",
+        padding: "5px",
+        lineHeight: "1.25"
+      },
+      submitInput: {padding: "0.75em 1em"}
+    },
+    initiallyVisible: true
+  });
+</script>
+   
       <script src="../Scripts/index.js"></script>
 
     </body>

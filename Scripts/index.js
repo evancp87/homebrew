@@ -66,7 +66,7 @@ window.addEventListener("scroll", () => {
     if (prevScrollpos > currentScrollPos) {
       document.getElementById("nav-bar").style.top = "0";
     } else {
-      document.getElementById("nav-bar").style.top = "-80px";
+      document.getElementById("nav-bar").style.top = "-110px";
     }
     prevScrollpos = currentScrollPos;
   }

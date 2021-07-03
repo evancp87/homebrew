@@ -262,15 +262,11 @@ h2 {
 .input {
   margin: 0 auto;
   padding: 0;
+  color: var(--amber);
   max-width: 1170px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-
-.newsletter-title {
-  color: var(--amber);
-  font-size: 1em;
 }
 
 /* footer */
@@ -361,12 +357,6 @@ section button {
   display: flex;
   justify-content: center;
 }
-/* 
-section:nth-of-type(6) {
-  margin-top: 50px;
-  margin-bottom: 10px;
-  padding: 1px;
-} */
 
 section:nth-of-type(7) {
   margin-top: 10px;
@@ -378,6 +368,10 @@ section:nth-of-type(7) {
   flex-direction: row;
   width: 40px;
   margin: 5px;
+}
+
+.social-media {
+  display: flex;
 }
 
 p.header-text {
@@ -898,5 +892,11 @@ section:first-of-type {
     display: flex;
     flex-direction: column;
     padding-left: 3em;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .img-description {
+    font-size: 12px;
   }
 }

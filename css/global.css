@@ -126,40 +126,14 @@ h2 {
 }
 
 .subscribe {
-  display: flex;
-  flex-direction: row;
-  display: inline-block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 10em;
   padding: 1px;
 }
 
 .input {
   margin: 0 auto;
   padding: 0;
-  max-width: 1170px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.newsletter-title {
   color: var(--amber);
-  font-size: 1em;
-}
-
-.subscribe {
-  display: flex;
-  flex-direction: row;
-  display: inline-block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding: 1px;
-}
-
-.input {
-  margin: 0 auto;
-  padding: 0;
   max-width: 1170px;
   display: flex;
   flex-direction: row;
@@ -233,6 +207,10 @@ h2 {
   flex-direction: row;
   width: 40px;
   margin: 5px;
+}
+
+.social-media {
+  display: flex;
 }
 
 nav ul {
