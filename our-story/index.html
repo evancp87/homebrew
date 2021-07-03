@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../plugins/normalize.min.css">
     <link rel="stylesheet" href="../plugins/animate.min.css">
     <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/ourstory.css" />
+    <link rel="stylesheet" href="./ourstory.css" />
   </head>
   <body>
     
@@ -183,7 +183,7 @@
       
       <p>Subscribe today and join a growing community of brewers and beer lovers</p>
 
-      <form action="" method="get">
+      <form id="contact-form" action="" method="get">
         <div class="form-item">
           <label for="email">Email *</label>
           <input type="email" name="email" id="email"
@@ -234,7 +234,7 @@
   <script src="../plugins/animatedModal.min.js"></script>
   <script> $("#demo01").animatedModal();</script>
   <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-
+<!-- form button -->
 <script>
   /* paste this in verbatim */
   window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments);};
@@ -243,17 +243,20 @@
   formbutton("create", {
     action: "https://formspree.io/f/xqkwlywy",
     title: "How can we help?",
+    description: "We'll be in touch asap",
     fields: [
       { 
         type: "email", 
         label: "Email:", 
         name: "email",
         required: true,
+        placeholder: "Email Address"
       },
       {
         type: "textarea",
         label: "Message:",
         name: "message",
+        placeholder: "Type your message"
       },
       { type: "submit" }
     ],
@@ -269,11 +272,41 @@
         padding: "5px",
         lineHeight: "1.25"
       },
-      submitInput: {padding: "0.75em 1em"}
+      submitInput: {padding: "0.75em 1em"},
+      fontFamily:'"Rubik", sans-serif',
+      button: {
+        background: "#e6b515"
+      }
+      
     },
     initiallyVisible: true
   });
 </script>
+
+<!-- Subscribe form api -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_GAOf35zcM3fyi8v48p6yP');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
     <script src="../Scripts/index.js"></script>
   </body>
 </html>

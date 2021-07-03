@@ -76,8 +76,6 @@ window.addEventListener("scroll", () => {
 
 
 
-  // pseudo code
-  // on a mobile site, when user scrolls past header image the nav bar disappears (including the hamburger menu)
-
+  
 
   // subscribe button brings up modal and when modal is clicked it sends name to a server

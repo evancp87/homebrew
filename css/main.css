@@ -52,6 +52,7 @@ nav {
   opacity: 0.9;
   padding: 0 15px;
   z-index: 5;
+  transition: 0.5s ease-in-out;
 }
 
 .logo {
@@ -359,8 +360,9 @@ section button {
 }
 
 section:nth-of-type(7) {
-  margin-top: 10px;
+  margin-top: 3.1em;
   padding: 1px;
+  margin-bottom: 3em;
 }
 
 .box li img {

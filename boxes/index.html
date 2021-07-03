@@ -17,7 +17,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awseome/5.13.0/css/all.min.css"
     />
     <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/boxes.css" />
+    <link rel="stylesheet" href="./boxes.css" />
   </head>
   <body>
     
@@ -282,17 +282,20 @@
   formbutton("create", {
     action: "https://formspree.io/f/xqkwlywy",
     title: "How can we help?",
+    description: "We'll be in touch asap",
     fields: [
       { 
         type: "email", 
         label: "Email:", 
         name: "email",
         required: true,
+        placeholder: "Email Address"
       },
       {
         type: "textarea",
         label: "Message:",
         name: "message",
+        placeholder: "Type your message"
       },
       { type: "submit" }
     ],
@@ -308,7 +311,12 @@
         padding: "5px",
         lineHeight: "1.25"
       },
-      submitInput: {padding: "0.75em 1em"}
+      submitInput: {padding: "0.75em 1em"},
+      fontFamily:'"Rubik", sans-serif',
+      button: {
+        background: "#e6b515"
+      }
+      
     },
     initiallyVisible: true
   });

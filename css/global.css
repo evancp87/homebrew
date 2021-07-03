@@ -54,6 +54,7 @@ nav {
   opacity: 0.9;
   padding: 0 15px;
   z-index: 5;
+  transition: 0.5s ease-in-out;
 }
 
 .logo {
@@ -126,8 +127,9 @@ h2 {
 }
 
 .subscribe {
-  margin-top: 10em;
+  margin-top: 3em;
   padding: 1px;
+  margin-bottom: 3em;
 }
 
 .input {
