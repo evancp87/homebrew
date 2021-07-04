@@ -377,7 +377,12 @@ input[type="submit"]:hover {
 
   @keyframes floatingbubbles {
     0% {
+      opacity: 0;
       top: 700px;
+    }
+    10% {
+      opacity: 0.6;
+      top: 650px;
     }
     90% {
       opacity: 0.7;
@@ -385,7 +390,7 @@ input[type="submit"]:hover {
     }
     100% {
       opacity: 0;
-      top: -30px;
+      top: 20px;
     }
   }
 
@@ -541,7 +546,12 @@ input[type="submit"]:hover {
 
   @keyframes floatingbubbles {
     0% {
-      top: 325px;
+      opacity: 0;
+      top: 250px;
+    }
+    10% {
+      top: 225px;
+      opacity: 0.6;
     }
     90% {
       opacity: 0.7;
@@ -549,7 +559,7 @@ input[type="submit"]:hover {
     }
     100% {
       opacity: 0;
-      top: -50px;
+      top: 20px;
     }
   }
 
