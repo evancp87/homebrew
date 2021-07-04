@@ -268,7 +268,7 @@ nav ul li:hover {
 }
 
 .form-item input {
-  padding-left: 62px;
+  padding: 10px;
 }
 
 label {

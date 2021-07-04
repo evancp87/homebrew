@@ -21,10 +21,6 @@ button {
   justify-content: center;
 }
 
-h2 {
-  font-size: 1.5em;
-}
-
 .main-carousel {
   background: #eee;
   width: 300px;
@@ -93,6 +89,10 @@ grid-row {
 
 button:last-of-type {
   justify-content: center;
+}
+
+header > h2 {
+  font-size: 1.5em;
 }
 
 @media only screen and (max-width: 600px) {
