@@ -870,6 +870,7 @@ section:first-of-type {
   .subscribe-btn {
     background-color: white;
     border-radius: 5px;
+    max-width: 10em;
     color: var(--amber);
   }
 
@@ -910,5 +911,23 @@ section:first-of-type {
 @media only screen and (min-width: 600px) and (max-width: 900px) {
   .img-description {
     font-size: 12px;
+  }
+}
+
+/* For Galaxy Folds and smaller */
+
+@media only screen and (max-width: 350px) {
+  .logo {
+    font-size: 1.5rem;
+    margin-right: 2em;
+  }
+
+  .input {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input input {
+    margin: 1em;
   }
 }
