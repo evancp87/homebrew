@@ -462,6 +462,7 @@ input[type="submit"]:hover {
   .subscribe-btn {
     background-color: white;
     border-radius: 5px;
+    max-width: 10em;
     color: var(--amber);
   }
 
@@ -605,5 +606,14 @@ input[type="submit"]:hover {
     display: flex;
     flex-direction: column;
     padding-left: 3em;
+  }
+}
+
+/* For Galaxy Folds and smaller */
+
+@media only screen and (max-width: 350px) {
+  .logo {
+    font-size: 1.5rem;
+    margin-right: 0;
   }
 }

@@ -65,8 +65,10 @@ window.addEventListener("scroll", () => {
     let currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
       document.getElementById("nav-bar").style.top = "0";
+      document.getElementById("nav-menu").style.top =  "65px";
     } else {
       document.getElementById("nav-bar").style.top = "-110px";
+      document.getElementById("nav-menu").style.top = "-300px";
     }
     prevScrollpos = currentScrollPos;
   }
@@ -77,5 +79,3 @@ window.addEventListener("scroll", () => {
 
 
   
-
-  // subscribe button brings up modal and when modal is clicked it sends name to a server
