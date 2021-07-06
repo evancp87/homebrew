@@ -211,6 +211,7 @@ input[type="submit"]:hover {
   left: 0;
   right: 0;
   background: rgba(29, 106, 154, 0.72);
+  margin: 0;
   color: #fff;
   visibility: hidden;
   opacity: 0;
