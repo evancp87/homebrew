@@ -441,7 +441,7 @@ section:first-of-type {
 
 @media only screen and (max-width: 600px) {
   .header-img {
-    background-image: url(../images/smallbeer.jpg);
+    background-image: url(../Images/Mediumbeer.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
