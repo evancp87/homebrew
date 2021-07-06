@@ -55,6 +55,7 @@ nav {
   transition: 0.5s ease-in-out;
 }
 
+/* navbar logo */
 .logo {
   font-weight: 700;
   padding: 3px 10px 7.5px 0;
@@ -64,6 +65,7 @@ nav {
   margin-right: 100px;
 }
 
+/* hamburger menu bars */
 .bar {
   display: block;
   width: 25px;
@@ -83,6 +85,7 @@ a {
   color: inherit;
 }
 
+/* header */
 .header-img {
   background-image: url(../images/smallbeer.jpg);
   background-size: cover;
@@ -101,10 +104,13 @@ a {
   flex-direction: column;
 }
 
+/* hamburger menu animation */
 #mobile-menu.toggle-open {
   transform: translateX(0%);
   opacity: 1;
 }
+
+/* header ends */
 
 a {
   text-decoration: none;
@@ -138,6 +144,7 @@ svg {
   flex-direction: center;
 }
 
+/* modal form */
 .form-item {
   margin: 30px 20px 30px 0;
   display: flex;
@@ -183,6 +190,9 @@ input[type="submit"]:hover {
   opacity: 1;
 }
 
+/* Javascript image transitions end */
+
+/* main sections */
 .shop .boxes .how-to {
   text-align: center;
   display: inline-block;
@@ -202,7 +212,6 @@ input[type="submit"]:hover {
   right: 0;
   background: rgba(29, 106, 154, 0.72);
   color: #fff;
-
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.2s, visibility 0.2s;
@@ -212,6 +221,8 @@ input[type="submit"]:hover {
   visibility: visible;
   opacity: 1;
 }
+
+/* stories section hover pop up text ends*/
 
 section {
   display: flex;
@@ -232,12 +243,9 @@ button {
   display: block;
 }
 
+/* stories image section */
 .stories {
   background-color: var(--beige);
-}
-
-.subscribe {
-  display: flex;
 }
 
 .gradient {
@@ -269,6 +277,8 @@ h2 {
   flex-direction: row;
   justify-content: center;
 }
+
+/* newsletter section ends */
 
 /* footer */
 .footer {
@@ -332,6 +342,8 @@ h2 {
   font-size: 2em;
 }
 
+/* footer ends */
+
 section picture {
   flex-basis: 10rem;
 }
@@ -365,6 +377,7 @@ section:nth-of-type(7) {
   margin-bottom: 3em;
 }
 
+/* footer specifity styling */
 .box li img {
   display: flex;
   flex-direction: row;
@@ -375,11 +388,13 @@ section:nth-of-type(7) {
 .social-media {
   display: flex;
 }
+/* footer specifity styling ends */
 
 p.header-text {
   font-size: 1em;
 }
 
+/* nav bar children/grandchildren styling */
 nav ul {
   display: flex;
   margin: 10px;
@@ -401,9 +416,10 @@ nav li {
 
 nav ul li:hover {
   color: var(--amber);
-  text-decoration: underline;
   transition: all 0.5s ease-in-out;
 }
+
+/* nav bar children/grandchildren styling ends */
 
 .about h2 {
   font-size: 3rem;
@@ -441,6 +457,7 @@ section:first-of-type {
   .footer ul {
     margin: 30px 1px;
   }
+
   /* mobile toggable menu */
   .nav-menu {
     position: fixed;
@@ -458,6 +475,7 @@ section:first-of-type {
   .nav-menu.active {
     left: 0;
   }
+  /* mobile toggable menu ends*/
 
   /* floating bubble animations in footer */
   .bubble {
@@ -536,7 +554,9 @@ section:first-of-type {
       margin-left: 30px;
     }
   }
+  /* bubbles animations end */
 
+  /* hamburger menu */
   .hamburger {
     display: block;
     cursor: pointer;
@@ -566,10 +586,10 @@ section:first-of-type {
       opacity: 1;
     }
   }
+  /* hamburger menu ends */
 
   .logo:hover {
     color: white;
-    text-decoration: underline;
     transition: all 0.5s ease-in-out;
   }
 }
@@ -591,8 +611,6 @@ section:first-of-type {
     height: auto;
     width: 100%;
     justify-content: space-between;
-    background-color: var(--amber);
-    z-index: 5;
     padding: 0 15px;
   }
 
@@ -642,7 +660,6 @@ section:first-of-type {
 
   nav ul li:hover {
     color: white;
-    text-decoration: underline;
     transition: all 0.5s ease-in-out;
   }
 
@@ -666,6 +683,7 @@ section:first-of-type {
     padding: 0.8em;
   }
 
+  /* for stories section grid styling and order */
   .grid-row {
     display: flex;
     flex-direction: row;
@@ -708,6 +726,9 @@ section:first-of-type {
     object-fit: cover;
     vertical-align: bottom;
   }
+  /* stories section ends */
+
+  /* footer */
 
   .r-footer > * {
     flex: 1;
@@ -731,6 +752,10 @@ section:first-of-type {
   .r-footer {
     flex: 2 0px;
   }
+
+  /* footer ends */
+
+  /* bubbles animation */
 
   .bubble {
     overflow: hidden;
@@ -808,7 +833,9 @@ section:first-of-type {
       margin-left: 50px;
     }
   }
+  /* bubbles animation ends */
 
+  /* animation for images and Javascript */
   .scrolled.slide-left {
     animation: slide-in-left 1s ease-in-out both;
   }
@@ -838,6 +865,9 @@ section:first-of-type {
       transform: translatex(0);
     }
   }
+
+  /* animation for images and Javascript ends*/
+
   /* Modal pop-up styling for desktop */
   .modal-content {
     display: flex;
@@ -868,6 +898,8 @@ section:first-of-type {
   /* Modal styling ends */
 
   .subscribe-btn {
+    display: flex;
+    align-self: flex-start;
     background-color: white;
     border-radius: 5px;
     max-width: 10em;

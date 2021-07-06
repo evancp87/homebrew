@@ -21,6 +21,7 @@ button {
   justify-content: center;
 }
 
+/* for carousels */
 .main-carousel {
   background: #eee;
   width: 300px;
@@ -86,6 +87,8 @@ grid-row {
 .flickity-prev-next-button.next {
   right: -10px;
 }
+
+/* carousels end */
 
 button:last-of-type {
   justify-content: center;

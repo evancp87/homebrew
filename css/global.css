@@ -66,6 +66,8 @@ nav {
   margin-right: 100px;
 }
 
+/* navbar ends */
+
 /* bars for hamburger menu button */
 .bar {
   display: block;
@@ -82,10 +84,13 @@ h1 {
   color: var(--amber);
 }
 
+/* animation for hamburger bars */
 #mobile-menu.toggle-open {
   transform: translateX(0%);
   opacity: 1;
 }
+
+/* animation for hamburger bars ends */
 
 a {
   text-decoration: none;
@@ -126,6 +131,7 @@ h2 {
   font-size: 15px;
 }
 
+/* newsletter section */
 .subscribe {
   margin-top: 3em;
   padding: 1px;
@@ -141,6 +147,8 @@ h2 {
   flex-direction: row;
   justify-content: center;
 }
+
+/* newsletter section ends */
 
 /* footer */
 .footer {
@@ -215,6 +223,8 @@ h2 {
   display: flex;
 }
 
+/* footer ends */
+
 nav ul {
   display: flex;
   margin: 20px;
@@ -236,7 +246,6 @@ nav li {
 
 nav ul li:hover {
   color: var(--amber);
-  text-decoration: underline;
   transition: all 0.5s ease-in-out;
 }
 
@@ -334,6 +343,10 @@ input[type="submit"]:hover {
     transform: translateY(-8px) rotate(-45deg);
   }
 
+  /* mobile toggable menu ends */
+
+  /* bubbles animation */
+
   .bubble {
     overflow: hidden;
     width: 40px;
@@ -402,10 +415,10 @@ input[type="submit"]:hover {
       margin-left: 30px;
     }
   }
+  /* bubbles animation ends */
 
   .logo:hover {
     color: white;
-    text-decoration: underline;
     transition: all 0.5s ease-in-out;
   }
 }
@@ -448,7 +461,7 @@ input[type="submit"]:hover {
 
   nav ul li:hover {
     color: white;
-    text-decoration: underline;
+
     transition: all 0.5s ease-in-out;
   }
 
@@ -460,6 +473,8 @@ input[type="submit"]:hover {
   }
 
   .subscribe-btn {
+    display: flex;
+    align-self: flex-start;
     background-color: white;
     border-radius: 5px;
     max-width: 10em;
@@ -472,6 +487,7 @@ input[type="submit"]:hover {
     transition: 500ms ease-in-out;
   }
 
+  /* footer */
   .r-footer > * {
     flex: 1;
   }
@@ -494,6 +510,7 @@ input[type="submit"]:hover {
   .r-footer {
     flex: 2 0px;
   }
+  /* footer ends */
 
   /* floating bubble animations in footer */
   .bubble {
@@ -572,6 +589,8 @@ input[type="submit"]:hover {
       margin-left: 50px;
     }
   }
+  /* bubbles animation ends */
+
   /* Modal pop-up styling for desktop */
   .modal-content {
     display: flex;
@@ -598,6 +617,7 @@ input[type="submit"]:hover {
     justify-content: center;
     padding-right: 1.5em;
   }
+  /* modal styling for desktop ends */
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
