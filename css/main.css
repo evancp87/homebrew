@@ -172,6 +172,26 @@ input[type="submit"]:hover {
   transition: all 0.5s ease;
 }
 
+.svg-icon {
+  width: 5em;
+  height: 5em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4691f6;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 10;
+}
+
+.svg-icon:hover {
+  transform: scale(1.4);
+  transition: 0.7s ease-in-out;
+}
 /* modal pop up styling ends */
 
 .about {
