@@ -613,8 +613,8 @@ section:first-of-type {
     background-position: center;
     position: relative;
     padding: 4em;
-    width: 100vw;
-    max-height: 100vh;
+    max-width: 100vw;
+    height: 100vh;
     margin-bottom: 0;
   }
 
