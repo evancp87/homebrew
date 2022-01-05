@@ -447,7 +447,8 @@ section:first-of-type {
     background-position: left;
     position: relative;
     padding: 3.5em;
-    max-width: 100%;
+    max-width: 100vw;
+    height: 100vh;
   }
   .stories ul {
     flex-direction: row;
@@ -612,7 +613,8 @@ section:first-of-type {
     background-position: center;
     position: relative;
     padding: 4em;
-    max-height: 100%;
+    width: 100vw;
+    max-height: 100vh;
     margin-bottom: 0;
   }
 
