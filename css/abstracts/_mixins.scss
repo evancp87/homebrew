@@ -1,0 +1,11 @@
+
+// mixin for gradient
+  @mixin background-gradient($background-color, $background-image) {
+      background-color: $bg-color;
+      background-image: $bg-image;
+  }
+
+//    $background-gradient: .gradient {
+//     background-color: red;
+//     background-image: linear-gradient(#e6a415, rgb(185, 180, 98));
+//   }

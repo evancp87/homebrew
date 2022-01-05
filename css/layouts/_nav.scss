@@ -1,0 +1,82 @@
+
+nav {
+    display: flex;
+    height: auto;
+    width: 100%;
+    background-color: var(--amber);
+    justify-content: flex-end;
+    position: fixed;
+    opacity: 0.9;
+    padding: 0 15px;
+    z-index: 5;
+    transition: 0.5s ease-in-out;
+  }
+  
+  /* navbar logo */
+  .logo {
+    font-weight: 700;
+    padding: 3px 10px 7.5px 0;
+    justify-content: center;
+    flex: 0 1 50rem;
+    font-size: 2rem;
+    margin-right: 100px;
+  }
+  
+  /* hamburger menu bars */
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3 ease in;
+    background-color: #000;
+  }
+  
+  h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--amber);
+  }
+  
+  a {
+    color: inherit;
+  }
+  
+  /* header */
+  /* .header-img {
+    background-image: url(../images/smallbeer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    position: relative;
+    padding: 3.5em;
+    max-width: 100%;
+  } */
+  
+
+/* nav bar children/grandchildren styling */
+nav ul {
+  display: flex;
+  margin: 10px;
+}
+
+nav ul li {
+  cursor: pointer;
+  padding: 0.5rem;
+  flex: auto;
+  text-align: center;
+}
+
+nav li {
+  justify-content: space-around;
+
+  margin: 5px;
+  max-width: 100%;
+}
+
+nav ul li:hover {
+  color: var(--amber);
+  transition: all 0.5s ease-in-out;
+}
+
+/* nav bar children/grandchildren styling ends */

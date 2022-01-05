@@ -1,0 +1,83 @@
+@use '../abstracts' as a;
+
+.bubble {
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    background: a.$bubble-amber;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .x1 {
+    left: 200px;
+    transform: scale(0.6);
+    opacity: 0.5;
+    animation: floatingbubbles 25s linear infinite,
+      sideWays 6s ease-in-out infinite alternate;
+      /* TODO: add animation-delay as property */
+  }
+
+  .x2 {
+    left: 155px;
+    transform: scale(0.9);
+    opacity: 0.2;
+    animation: floatingbubbles 15s linear infinite,
+      sideWays 3s ease-in-out infinite alternate;
+  }
+
+  .x3 {
+    left: 130px;
+    transform: scale(0.4);
+    opacity: 0.8;
+    animation: floatingbubbles 12s linear infinite,
+      sideWays 1s ease-in-out infinite alternate;
+  }
+
+  .x4 {
+    left: 40px;
+    transform: scale(0.7);
+    opacity: 0.4;
+    animation: floatingbubbles 8s linear infinite,
+      sideWays 5s ease-in-out infinite alternate;
+  }
+
+  .x5 {
+    left: 55px;
+    transform: scale(0.5);
+    opacity: 0.6;
+    animation: floatingbubbles 20s linear infinite,
+      sideWays 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes floatingbubbles {
+    0% {
+      opacity: 0;
+      top: 700px;
+    }
+    10% {
+      opacity: 0.6;
+      top: 650px;
+    }
+    90% {
+      opacity: 0.7;
+      top: 0px;
+    }
+    100% {
+      opacity: 0;
+      top: 20px;
+    }
+  }
+
+  @keyframes sideWays {
+    0% {
+      margin-left: 0px;
+    }
+    100% {
+      margin-left: 30px;
+    }
+  }
+  /* bubbles animations end */
+
+
+//   refactor to use calc and a function to calculate a random animation

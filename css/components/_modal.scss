@@ -1,0 +1,59 @@
+
+
+/* hamburger menu animation */
+#mobile-menu.toggle-open {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  
+
+  /* for modal pop up */
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2em;
+  }
+  
+  .modal-flex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 50px;
+    margin: 0 auto;
+  }
+  
+  .modal-flex img {
+    max-width: 300px;
+    height: auto;
+    flex-direction: center;
+  }
+  
+
+/* modal form */
+.form-item {
+    margin: 30px 20px 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .form-item input {
+    padding: 10px;
+  }
+  
+  label {
+    margin-right: 35px;
+  }
+  
+  input[type="submit"] {
+    padding: 0.4em;
+    background-color: var(--amber);
+    box-shadow: 5px 5px 0 rgba(15, 15, 15, 0.5);
+  }
+  
+  input[type="submit"]:hover {
+    padding: 0.4em;
+    box-shadow: 1px 1px 0 rgba(15, 15, 15, 0.5);
+    transition: all 0.5s ease;
+  }
+  

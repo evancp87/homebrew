@@ -1,0 +1,36 @@
+@use '../layouts/nav';
+@use '../layouts/header';
+@use '../layouts/footer';
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--beige);
+  }
+  main {
+    margin-top: 100px;
+  }
+  
+  iframe {
+    margin: 0 auto;
+  }
+  
+  h1 {
+    color: var(--amber);
+  }
+  
+  h1,
+  p {
+    text-align: center;
+    margin: 50px;
+    padding: 1px;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    iframe {
+      height: 300;
+    }
+  }
+  

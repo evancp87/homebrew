@@ -1,0 +1,43 @@
+@use '../abstracts/' as a;
+
+.about {
+    display: flex;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  /* for Javascript image transistions */
+  .js-scroll {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+  
+  .js-scroll.scrolled {
+    opacity: 1;
+  }
+
+//   * main sections */
+.shop .boxes .how-to {
+  text-align: center;
+  display: inline-block;
+  align-items: center;
+}
+
+
+.about h2 {
+    font-size: 3rem;
+    color: a.$amber;
+  }
+  
+  section img {
+    min-height: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  
+  section:first-of-type {
+    padding: 0.7em;
+    border-bottom: 1px solid #000;
+    margin-top: 5px;
+  }
+  

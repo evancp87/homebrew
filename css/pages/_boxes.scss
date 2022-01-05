@@ -1,0 +1,127 @@
+@use '../layouts/nav';
+@use '../layouts/header';
+@use '../layouts/footer';
+* {
+    box-sizing: border-box;
+  }
+  
+  main {
+    margin: 0 auto;
+    padding: 60px;
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  h1,
+  p,
+  button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* for carousels */
+  .main-carousel {
+    background: #eee;
+    width: 300px;
+    margin: 30px;
+  }
+  
+  .carousel-cell {
+    width: 100%;
+    height: 200px;
+    background: #8c8;
+    border-radius: 5px;
+  }
+  
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+  
+  .carousel-cell img {
+    width: 100%;
+    height: auto;
+  }
+  
+  grid-row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .grid-column {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* smaller, dark, rounded square */
+  .flickity-prev-next-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background: #333;
+  }
+  .flickity-prev-next-button:hover {
+    background: var(--amber);
+  }
+  /* arrow color */
+  .flickity-prev-next-button .arrow {
+    fill: white;
+  }
+  .flickity-prev-next-button.no-svg {
+    color: white;
+  }
+  /* position outside */
+  .flickity-prev-next-button.previous {
+    left: -10px;
+  }
+  .flickity-prev-next-button.next {
+    right: -10px;
+  }
+  
+  /* carousels end */
+  
+  button:last-of-type {
+    justify-content: center;
+  }
+  
+  header > h2 {
+    font-size: 1.5em;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .grid-column {
+      margin-top: 20px;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    section {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    grid-row {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) and (max-width: 1024px) {
+    section {
+      flex-wrap: wrap;
+    }
+  }
+  

@@ -1,0 +1,28 @@
+
+/* stories section hover pop up text */
+.img-wrap {
+    position: relative;
+  }
+  
+  .img-description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    margin: 0;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+  
+  .img-wrap:hover .img-description {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .stories {
+    background-color: var(--beige);
+  }

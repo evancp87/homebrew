@@ -1,0 +1,26 @@
+button {
+    border-radius: 3px;
+    background-color: var(--amber);
+    box-shadow: 5px 5px 0 rgba(15, 15, 15, 0.5);
+    font-size: 1rem;
+    display: inline-block;
+    width: 10em;
+    height: auto;
+    padding: 1em;
+    display: block;
+  }
+
+  section button {
+    margin: 0 auto;
+    padding: 0.8em;
+  }
+  
+  button:hover {
+    box-shadow: 1px 1px 0 rgba(15, 15, 15, 0.5);
+    transition: all 0.5s ease;
+  }
+
+  section button {
+    display: flex;
+    justify-content: center;
+  }
