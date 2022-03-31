@@ -1,11 +1,43 @@
-
+@use './colors' as c;
 // mixin for gradient
-  @mixin background-gradient($background-color, $background-image) {
+  @mixin background-gradient($bg-color, $bg-image) {
       background-color: $bg-color;
       background-image: $bg-image;
   }
 
+  // https://kittygiraudel.com/2014/07/16/automating-css-animations-with-sass/
+  // https://glennmccomb.com/articles/creating-smooth-sequential-animations-with-sass/
+// https://css-tricks.com/repeatable-staggered-animation-three-ways-sass-gsap-web-animations-api/
+  
+  // @mixin bubble-animation ($keyframes, $bubble, $animation-name: 'bubbles') {
+
+  //   @if unitless($static) {
+  //     $static: percentage($static);
+  //   }
+  //   $animating: (100% - $frames * $static) / ($frames - 1);
+  //   @at-root {
+  //     @keyframes #{$animation-name} {
+  //       @for $i from 0 to $frames {
+  //         $current-frame: $i * $static + $i * $animating;
+  //         $next-frame: ($i + 1) * $static + $i * $animating;
+  //         $halfway-frame: $i * $static / 1% + ($i - 1) * $animating + $animating / 2;
+  //         @if $i > 0 {
+  //           #{$halfway-frame} {
+  //             filter: blur(2px);
+  //           }
+  //         }
+  //         #{$current-frame, $next-frame} {
+  //           transform: translateX($i * -100% / $frames);
+  //           filter: blur(0);
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // @include carousel-animation(5, 17.5%);
+
 //    $background-gradient: .gradient {
 //     background-color: red;
-//     background-image: linear-gradient(#e6a415, rgb(185, 180, 98));
+//     background-image: linear-gradient($gradient-amber:, $gradient-yellow);
 //   }
+

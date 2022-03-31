@@ -1,36 +1,55 @@
-@use '../layouts/nav';
-@use '../layouts/header';
-@use '../layouts/footer';
 
-* {
-    box-sizing: border-box;
+@use '../abstracts' as a;
+
+
+ .video-text {
+   margin-bottom: 2rem;
+ }
+
+  .how-to-header {
+    color: a.$amber;
+    margin-top: 5rem;
+
   }
   
-  body {
-    background-color: var(--beige);
+  .iframe-width-wrapper {
+    max-width: 1000px;
   }
-  main {
-    margin-top: 100px;
+
+  .iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
   }
+
+  .iframe-container iframe {
+position: absolute;
+top: 0;
+left: 0;
+max-width: 100%;
+height: 100%;
+
+  }
+
+
   
-  iframe {
-    margin: 0 auto;
-  }
+
   
-  h1 {
-    color: var(--amber);
-  }
-  
-  h1,
-  p {
-    text-align: center;
-    margin: 50px;
-    padding: 1px;
-  }
-  
-  @media only screen and (max-width: 500px) {
-    iframe {
-      height: 300;
-    }
-  }
-  
+  @media only screen and (min-width: 600px) {
+
+
+  //   .iframe-container {
+  //     position: relative;
+  //     // max-width: 500px;
+  //     // padding-bottom: 56.25%;
+  //     height: 100%;
+  //   }
+
+  //   .iframe-container iframe {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     max-width: 100%;
+  //     height: 100%;
+  // }
+}

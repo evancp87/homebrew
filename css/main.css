@@ -250,13 +250,13 @@ button {
   background-color: var(--beige);
 }
 
-/* TODO: Find place for this */
+
 .gradient {
   background-color: red;
   background-image: linear-gradient(#e6a415, rgb(185, 180, 98));
 }
 
-/* TODO: Find place for this */
+
 h2 {
   font-weight: 400;
   font-size: 15px;

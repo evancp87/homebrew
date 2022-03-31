@@ -1,26 +1,46 @@
-button {
-    border-radius: 3px;
-    background-color: var(--amber);
-    box-shadow: 5px 5px 0 rgba(15, 15, 15, 0.5);
-    font-size: 1rem;
-    display: inline-block;
-    width: 10em;
-    height: auto;
-    padding: 1em;
-    display: block;
-  }
+@use '../abstracts/' as a;
 
-  section button {
-    margin: 0 auto;
-    padding: 0.8em;
-  }
-  
-  button:hover {
+
+%button {
+  border-radius: 3px;
+  background-color: a.$amber;
+  box-shadow: 5px 5px 0 rgba(15, 15, 15, 0.5);
+  font-size: 1rem;
+  display: inline-block;
+  width: 10em;
+  height: auto;
+  padding: 1em;
+  display: block;
+
+  &:hover {
     box-shadow: 1px 1px 0 rgba(15, 15, 15, 0.5);
     transition: all 0.5s ease;
   }
+}
 
-  section button {
-    display: flex;
-    justify-content: center;
+  .btn {
+
+@extend %button;
+  }
+
+
+
+
+  @media only screen and (min-width: 600px) {
+    .subscribe-btn {
+        display: flex;
+        align-self: flex-start;
+        background-color: a.$white;
+        border-radius: 5px;
+        max-width: 10em;
+        color: a.$amber;
+        &:hover {
+          background-color: transparent;
+          color: a.$white;
+          transition: 500ms ease-in-out;
+        }
+      }
+    
+    
+
   }

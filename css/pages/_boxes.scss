@@ -1,127 +1,171 @@
-@use '../layouts/nav';
-@use '../layouts/header';
-@use '../layouts/footer';
-* {
-    box-sizing: border-box;
+
+@use '../abstracts' as a;
+
+// TODO: build accordion for boxes information or research better UI/UX
+
+// * {
+//   box-sizing: border-box;
+// }
+
+// main {
+//   margin: 0 auto;
+//   padding: 60px;
+// }
+
+// section {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   text-align: center;
+// }
+
+.boxes-header {
+  // display: flex;
+ 
+  margin: 4rem 0 0 0;
+  padding: 0;
+}
+
+.boxes-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  // flex-wrap: wrap;
+  // flex-wrap: wrap;
+}
+/* for carousels */
+.main-carousel {
+  background: a.$light-grey;
+  width: 300px;
+  margin: 30px;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 200px;
+  background: a.$carousel-green;
+  border-radius: 5px;
+}
+
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: a.$white;
+}
+
+.carousel-cell img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-grid-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-grid-column {
+  border: 2px solid a.$amber;
+  // flex-wrap: wrap;
+
+  display: flex;
+  flex: {
+    direction: column;
+    grow: 1;
+    shrink: 1;
+    basis: auto;
   }
-  
-  main {
-    margin: 0 auto;
-    padding: 60px;
-  }
-  
-  section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  h1,
-  p,
-  button {
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* for carousels */
-  .main-carousel {
-    background: #eee;
-    width: 300px;
-    margin: 30px;
-  }
-  
-  .carousel-cell {
-    width: 100%;
-    height: 200px;
-    background: #8c8;
-    border-radius: 5px;
-  }
-  
-  .carousel-cell:before {
-    display: block;
-    text-align: center;
-    line-height: 200px;
-    font-size: 80px;
-    color: white;
-  }
-  
-  .carousel-cell img {
-    width: 100%;
-    height: auto;
-  }
-  
-  grid-row {
-    display: flex;
-    flex-direction: column;
-  }
-  
+  margin: {
+    top: 1em;
+    bottom: 1em;
+  };
+  align-items: center;
+ 
+}
+
+
+
+/* smaller, dark, rounded square */
+.flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background: #333;
+}
+.flickity-prev-next-button:hover {
+  background: a.$amber;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: a.$white;
+}
+.flickity-prev-next-button.no-svg {
+  color: a.$white;
+}
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: -10px;
+}
+.flickity-prev-next-button.next {
+  right: -10px;
+}
+
+/* carousels end */
+
+// button:last-of-type {
+//   justify-content: center;
+// }
+
+// header > h2 {
+//   font-size: 1.5em;
+// }
+
+
+.carousel-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
   .grid-column {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-    margin: 0;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  // section {
+  //   display: flex;
+  //   flex-direction: row;
+  // }
+
+  
+  .carousel-grid-row {
     display: flex;
     flex-direction: column;
-    align-items: center;
+  }
+  .carousel-grid-column {
+    border: 2px solid a.$amber;
+    margin-right: 10px;
+  }
+}
+.carousel-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  margin: 2em 0 2em 0;
+}
+
+@media only screen and (min-width: 1150px) {
+  .boxes-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    // flex-wrap: wrap;
+    // flex-wrap: wrap;
   }
   
-  /* smaller, dark, rounded square */
-  .flickity-prev-next-button {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    background: #333;
-  }
-  .flickity-prev-next-button:hover {
-    background: var(--amber);
-  }
-  /* arrow color */
-  .flickity-prev-next-button .arrow {
-    fill: white;
-  }
-  .flickity-prev-next-button.no-svg {
-    color: white;
-  }
-  /* position outside */
-  .flickity-prev-next-button.previous {
-    left: -10px;
-  }
-  .flickity-prev-next-button.next {
-    right: -10px;
-  }
-  
-  /* carousels end */
-  
-  button:last-of-type {
-    justify-content: center;
-  }
-  
-  header > h2 {
-    font-size: 1.5em;
-  }
-  
-  @media only screen and (max-width: 600px) {
-    .grid-column {
-      margin-top: 20px;
-    }
-  }
-  
-  @media only screen and (min-width: 600px) {
-    section {
-      display: flex;
-      flex-direction: row;
-    }
-  
-    grid-row {
-      display: flex;
-      flex-direction: row;
-    }
-  }
-  
-  @media only screen and (min-width: 600px) and (max-width: 1024px) {
-    section {
-      flex-wrap: wrap;
-    }
-  }
-  
+}
+    

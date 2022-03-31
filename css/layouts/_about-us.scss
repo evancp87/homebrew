@@ -1,10 +1,45 @@
 @use '../abstracts/' as a;
 
-.about {
+// section {
+//     display: flex;
+//     flex-direction: column;
+//     padding: 1em;
+//     padding-bottom: 5em;
+//   }
+
+
+
+// section img {
+//     min-height: 100%;
+//     max-width: 100%;
+//     min-width: 100%;
+//   }
+  
+  // section:first-of-type {
+  //   padding: 0.7em;
+  //   border-bottom: 1px solid #000;
+  //   margin-top: 5px;
+  // }
+  
+.about-us {
     display: flex;
     display: inline-block;
     text-align: center;
+    padding: 0.7em;
+    border-bottom: 1px solid #000;
+    margin-top: 5px;
+
+    .about-blurb {
+  
+      font-size: 1rem;
+      
+      h2 {
+        color: a.$amber;
+  
+      }
+    }
   }
+  
   
   /* for Javascript image transistions */
   .js-scroll {
@@ -29,15 +64,162 @@
     color: a.$amber;
   }
   
-  section img {
-    min-height: 100%;
-    max-width: 100%;
-    min-width: 100%;
+  
+  // on scroll animations for mobile devices
+  
+  .scrolled.fade-in-bottom {
+    animation: fade-in-bottom 1s ease-in-out both;
   }
   
-  section:first-of-type {
-    padding: 0.7em;
-    border-bottom: 1px solid #000;
-    margin-top: 5px;
+  @keyframes fade-in-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
+
+  /* TODO: find place for these */
+// section picture {
+//     flex-basis: 10rem;
+//   }
   
+//   section div {
+//     flex-basis: 5rem;
+//   }
+  
+  @media only screen and (min-width: 600px) {
+// TODO: check this
+  // section {
+  //   margin: 0;
+  //   padding: 0;
+  // }
+
+
+  // section p {
+  //   text-align: center;
+  //   padding: 2em;
+  // }
+
+  // section:first-of-type {
+  //   padding: 2.5rem;
+  //   border-bottom: 1px solid #000;
+  //   margin: 10px;
+  // }
+
+
+  // section:nth-of-type(6) {
+  //   margin-top: 50px;
+  // }
+  // section button {
+  //   margin: 0 auto;
+  //   padding: 0.8em;
+  // }
+
+
+  /* for stories section grid styling and order */
+  .grid-row {
+    display: flex;
+    flex-direction: row;
+    
+    .grid-column {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+      margin: 0;
+    }
+
+    .grid-half {
+      max-width: 50%;
+      justify-content: center;
+      align-items: center;
+
+      // > p {
+      //   justify-content: center;
+      //   align-items: center;
+      // }
+
+    .grid-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    }
+
+  }
+
+
+  .first-order {
+    order: 0;
+  }
+
+  .second-order {
+    order: 1;
+  }
+
+
+  .scrolled.slide-left {
+    animation: slide-in-left 1s ease-in-out both;
+  }
+
+  .scrolled.slide-right {
+    animation: slide-in-right 1s ease-in-out both;
+  }
+
+ 
+
+  @keyframes slide-in-left {
+    0% {
+      opacity: 0;
+      transform: translatex(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translatex(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      opacity: 0;
+      transform: translatex(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translatex(0);
+    }
+  }
+
+  /* animation for images and Javascript ends*/
+
+
+
+
+  }
+
+
+  @media only screen and (min-width: 900px) {
+    // section p {
+    //     text-align: center;
+    //     // padding: 5em;
+    //   }
+
+   
+
+    .about-us {
+      padding: 7rem;
+
+      .about-blurb {
+  
+        font-size: 2.5em;
+        h2 {
+          color: a.$amber;
+  
+        }
+      }
+    }
+}

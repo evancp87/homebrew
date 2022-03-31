@@ -1,4 +1,7 @@
+@use '../abstracts' as a;
 
+
+// TODO: refactor modal to use own code instead of plugin
 
 /* hamburger menu animation */
 #mobile-menu.toggle-open {
@@ -12,15 +15,18 @@
     display: flex;
     flex-direction: column;
     padding-left: 2em;
+    margin-top: 10em;
+    
+    .modal-flex {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 50px;
+      margin: 0 auto;
+
+    }
   }
   
-  .modal-flex {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 50px;
-    margin: 0 auto;
-  }
   
   .modal-flex img {
     max-width: 300px;
@@ -35,19 +41,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    
+    input {
+      padding: 10px;
+    }
+    
+    label {
+      margin-right: 35px;
+    }
   }
   
-  .form-item input {
-    padding: 10px;
-  }
-  
-  label {
-    margin-right: 35px;
-  }
+ 
   
   input[type="submit"] {
     padding: 0.4em;
-    background-color: var(--amber);
+    background-color: a.$amber;
     box-shadow: 5px 5px 0 rgba(15, 15, 15, 0.5);
   }
   
@@ -57,3 +66,48 @@
     transition: all 0.5s ease;
   }
   
+
+  @media only screen and (min-width: 600px) {
+    .modal-content {
+        display: flex;
+        flex-direction: row;
+        margin-top: 7em;
+        .modal-flex {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          margin: 0 auto;
+          padding: 3em;
+        }
+      
+      }
+    
+      .modal-flex img {
+        max-width: 500px;
+        height: auto;
+      }
+    
+      .modal-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 2em;
+      }
+    
+      /* Modal styling ends */
+    
+
+
+  }
+
+
+  @media only screen and (min-width: 600px) and (max-width: 1000px) {
+    /* for modal pop up tablets*/
+    .modal-content {
+      display: flex;
+      flex-direction: column;
+      padding-left: 3em;
+      
+    }
+  }

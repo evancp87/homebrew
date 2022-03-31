@@ -1,3 +1,12 @@
-@use '../layouts/nav';
-@use '../layouts/header';
-@use '../layouts/footer';
+
+
+
+// TODO: for homeepage- look into
+main {
+    max-width: 1170px;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    margin: 0 auto;
+  }
+  

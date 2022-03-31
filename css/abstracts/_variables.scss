@@ -3,12 +3,15 @@
 // colors
   $amber: #e6b515;
   $bubble-amber: c.$amber-two;
-  $green: #14a96d;
-  $white: #fff;
-  $beige: #ebe7dc;
-  $offwhite: #faf9f6;
-  $black: #0000;
+  $light-grey: #eee;
   $footer-grey: c.$grey;
+  $carousel-green: #8c8;
   $content-wrapper-width: 1170px;
+  $img-description: c.$blue;
+//   bubble animation shorthands
+//   $bubble-animation: 
+$slide-in-left: slide-in-left 1s ease-in-out both;
+$slide-in-right: slide-in-right 1s ease-in-out both;
+
 
  

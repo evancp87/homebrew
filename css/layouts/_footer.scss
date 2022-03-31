@@ -1,12 +1,22 @@
 @use '../abstracts/' as a;
 
 /* footer */
+
+// TODO: check if belongs here
+
+
+//TODO: check if belongs here
+
 .footer {
     display: flex;
     flex-flow: row wrap;
     position: relative;
     padding: 30px;
     color: a.$white;
+  }
+
+  .gradient {
+    @include a.background-gradient(red, linear-gradient(a.$gradient-amber, a.$gradient-yellow));
   }
   
   .footer > * {
@@ -42,7 +52,7 @@
   }
   
   .box a {
-    color: c.$footer-grey;
+    color: a.$footer-grey;
   }
   
   .h-box {
@@ -52,7 +62,7 @@
   
   .b-footer {
     text-align: center;
-    color: c.$footer-grey;
+    color: a.$footer-grey;
     padding-top: 50px;
   }
   
@@ -77,3 +87,42 @@
   display: flex;
 }
 /* footer specifity styling ends */
+
+
+@media only screen and (max-width: 600px) {
+  
+  .footer ul {
+    margin: 30px 1px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+
+  .r-footer > * {
+    flex: 1;
+  }
+
+  .box li img {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    margin: 5px;
+  }
+
+  .features {
+    flex-grow: 2;
+  }
+
+  .l-footer {
+    flex: 1 0px;
+  }
+
+  .r-footer {
+    flex: 2 0px;
+  }
+
+  /* footer ends */
+
+
+}

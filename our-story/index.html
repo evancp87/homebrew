@@ -15,13 +15,15 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
   <link rel="stylesheet" href="../plugins/normalize.min.css">
   <link rel="stylesheet" href="../plugins/animate.min.css">
-  <link rel="stylesheet" href="../css/global.css" />
-  <link rel="stylesheet" href="./ourstory.css" />
+  <!-- <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="./ourstory.css" /> -->
+<link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
 
-  <nav id="nav-bar">
+  <nav class='nav-b'id="nav-bar">
 
     <ul>
       <li class="logo"><a href="../index.html">HomeBrew</a></li>
@@ -29,10 +31,10 @@
 
     <ul class="nav-menu" id="nav-menu">
 
-      <li><a href="../our-story/index.html">Our Story</a></li>
-      <li><a href="#">Shop</a></li>
-      <li><a href="../boxes/index.html">Boxes</a></li>
-      <li><a href="../how-to-homebrew/index.html">How to HomeBrew</a></li>
+      <li class='nav-item'><a href="../our-story/index.html">Our Story</a></li>
+      <li class='nav-item'><a href="#">Shop</a></li>
+      <li class='nav-item'><a href="../boxes/index.html">Boxes</a></li>
+      <li class='nav-item'><a href="../how-to-homebrew/index.html">How to HomeBrew</a></li>
       <li class="subscribe-btn"><a id="demo01" href="#animatedModal">Subscribe</a></li>
     </ul>
     </ul>
@@ -43,7 +45,7 @@
     </div>
   </nav>
 
-  <header class="header-img">
+  <header class="about-header">
 
     <div class="header-text">
       <h1><span><small>Our</small></span><span> Story</span></h1>
@@ -52,27 +54,27 @@
   </header>
   </div>
 
-  <main>
-    <section>
-      <article class="">
+  <main class='our-story-main'>
+    <section class='about-us-txt'>
+      <article class="about-article">
 
-        <p>
+        <p class="about-copy">
           Hi, my name is Evan, and i love beer! Due to worldwide events in 2020 you may be familiar with, beer was in
           short supply throughout much of the UK. I could've simply stocked up on crates and crates of beer, or have
           gone without for months on end. Neither was an option I was willing to accept.</p>
 
-        <p>Lockdown was pretty lonely, and the days long. Work was pretty tough going and I needed to fill my evenings
+        <p class="about-copy">Lockdown was pretty lonely, and the days long. Work was pretty tough going and I needed to fill my evenings
           with activities to stay sane. My friends were in a similar situation, and after many boozy zoom calls we came
           up with the idea of brewing our own beer to beat the drinks drought.</p>
 
-        <p>
+        <p class="about-copy">
           We decided to set ourselves a lockdown project around brewing beer. We would each learn how to brew beers, try
           different recipes and post them to eachother to sample and review on a weekly basis. Of course the first few
           batches were undrinkable, but we kept at it until we felt proud of our beers. Lockdown may have ended, but we
           decided to keep that same energy going.
         </p>
 
-        <p>We became confident enough with our own brewing skills that we were able to quit our day jobs, and sell a
+        <p class="about-copy">We became confident enough with our own brewing skills that we were able to quit our day jobs, and sell a
           small range of our individual homemade beer recipes. Although we're still a small startup, our ambitions were
           set high, and we have progressed to the point where our beers are stocked in small craft beer shops, we have
           been able to curate a small selection of international beers. Excitingly, we have expanded to include a range
@@ -80,46 +82,37 @@
           and how to guides. With the already expensive pre-pandemic average drink price soaring to over £6, now has
           never been a better time to just do it yourself.</p>
 
-        <div>
+        
 
 
-          <p>
-            Love from - "The HomeBrew Crew"
-          </p>
+          <p class='about-copy' >
+            Love from - "The HomeBrew Crew" </p>
+          
         </div>
+        <picture class="beer-photo"><img src="../Images/512px-Friends_cheers.jpg" alt="Friends giving cheers"></picture>
 
       </article>
     </section>
 
-    <picture><img src="../Images/512px-Friends_cheers.jpg" alt="Friends giving cheers"></picture>
 
-    <section class="about">
+    
+    <section class="subscribe ">
       <div>
 
+        <form class="newsletter-form" action="https://formspree.io/f/mqkwlnod" method="POST">
+          <div class='input'>
+            <label for="email">News, Recipes & much more!</label>
 
-        <p> HomeBrew is run by Evan Parker, Neel Patel, Jay Mistry and Luke Prescott. We wanted our company to be a hub
-          for beer lovers, those whose passion goes beyond big corporate beer makers and towards something more grass
-          roots. We truly believe that anyone is capable of brewing their own beer, and want to cultivate a new
-          generation of beer brewers</p>
+            <div class='input-fields'>
 
-        <picture><img src="../Images/beer.svg" alt="Beer Logo"></picture>
+              <input id="email" name="email" type="email" placeholder="Your email" required>
+              <input type="button" value="Submit" />
+            </div>
 
-      </div>
-
-    </section>
-
-    <section class="subscribe">
-      <div>
-        <form class="input " action="https://formspree.io/f/mqkwlnod" method="POST">
-          <label for="email">News, Recipes & much more!</label>
-          <input id="email" name="email" type="email" placeholder="Your email" required>
-          <input type="button" value="Submit" />
+          </div>
         </form>
       </div>
-
-
-
-    </section>
+      </section>
   </main>
 
   <footer class="footer gradient">
