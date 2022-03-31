@@ -12,23 +12,31 @@
     background-image: url(../images/smallbeer.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: top;
     position: relative;
     max-width: 100vw;
     height: 100vh;
 
 
     .header-text {
-      top: 200px;
-      width: 200px;
+      top: 25%;
+    left: 10%;
       color: a.$white;
       display: flex;
       flex-direction: column;
-    
-      .consumer-question {
-        font-size: 1.5em;
-        padding: 0;
+      background-color: a.$coral;
+      padding: 1em;
+      border-radius: 5%;
+
+      .tagline {
+        font-size: 1.6em;
+
+        + .consumer-question {
+          font-size: 1.2em;
+          padding: 0;
+        }
       }
+    
     }
   } 
   
@@ -116,6 +124,8 @@
           position: absolute;
           top: 250px;
           left: 0;
+          background-color: transparent;
+          border-radius: none;
 
           .tagline {
             font-size: 3rem;
@@ -139,3 +149,34 @@
       }
     }
   }  
+
+  @media only screen and (max-width: 300px) {
+      .header-img {
+        
+        
+          .header-text {
+            max-width: 200px;
+            color: a.$white;
+            padding: 1em;
+            position: absolute;
+            top: 25%;
+            left: 15%;
+            border-radius: none;
+      
+  
+            .tagline {
+              font-size: 1.2em;
+              font-weight: 800;
+              margin-bottom: 0;
+  
+  
+              + .consumer-question {
+                font-size: 0.8em;
+                padding: 0;
+                margin-top: 3em;
+                font-weight: 600;
+              }
+            }
+          }
+      }
+  }

@@ -5,6 +5,14 @@
       background-image: $bg-image;
   }
 
+
+//   @mixin floating-bubbles ($i, $animTime, $totalTime, $delay) {
+// @include keyframes(bubble#{$i})
+//   }
+
+//   @mixin sideways (){
+
+//   }
   // https://kittygiraudel.com/2014/07/16/automating-css-animations-with-sass/
   // https://glennmccomb.com/articles/creating-smooth-sequential-animations-with-sass/
 // https://css-tricks.com/repeatable-staggered-animation-three-ways-sass-gsap-web-animations-api/
@@ -36,7 +44,7 @@
   // }
   // @include carousel-animation(5, 17.5%);
 
-//    $background-gradient: .gradient {
+//    $background-gradient: a$.gradient {
 //     background-color: red;
 //     background-image: linear-gradient($gradient-amber:, $gradient-yellow);
 //   }

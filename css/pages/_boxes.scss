@@ -22,8 +22,16 @@
 .boxes-header {
   // display: flex;
  
-  margin: 4rem 0 0 0;
+  margin: 4rem 2rem 2rem 0;
   padding: 0;
+
+  :nth-child(1) {
+    color: a.$amber
+  }
+
+  :nth-child(3) {
+    margin: 1em 2em 0 0; 
+  }
 }
 
 .boxes-wrapper {
@@ -129,11 +137,7 @@
   margin: 0;
 }
 
-@media only screen and (max-width: 600px) {
-  .grid-column {
-    margin-top: 20px;
-  }
-}
+
 
 @media only screen and (min-width: 600px) {
   // section {
@@ -156,7 +160,29 @@
   flex-direction: column;
   padding: 2em;
   margin: 2em 0 2em 0;
+
+  > h3 {
+    color: a.$amber;
+
+    + .content-details > * {
+      margin: 1em 0 1em 0;
+    }
+  }
 }
+
+.boxes-header {
+  // display: flex;
+ 
+  margin: 4rem 2rem 2rem 0;
+  padding: 0;
+
+  
+
+  :nth-child(3) {
+    margin: 1em 2em 0 0; 
+  }
+}
+
 
 @media only screen and (min-width: 1150px) {
   .boxes-wrapper {

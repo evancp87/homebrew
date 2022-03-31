@@ -32,7 +32,7 @@
     .about-blurb {
   
       font-size: 1rem;
-      
+
       h2 {
         color: a.$amber;
   
@@ -130,6 +130,7 @@
       flex-shrink: 1;
       flex-basis: auto;
       margin: 0;
+      
     }
 
     .grid-half {
@@ -142,7 +143,7 @@
       //   align-items: center;
       // }
 
-    .grid-content {
+    .grid-content > * {
       display: flex;
       flex-direction: column;
       justify-content: center;
