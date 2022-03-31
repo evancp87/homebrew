@@ -1,0 +1,17 @@
+@use './colors' as c;
+
+// colors
+  $amber: #e6b515;
+  $bubble-amber: c.$amber-two;
+  $light-grey: #eee;
+  $footer-grey: c.$grey;
+  $carousel-green: #8c8;
+  $content-wrapper-width: 1170px;
+  $img-description: c.$blue;
+//   bubble animation shorthands
+//   $bubble-animation: 
+$slide-in-left: slide-in-left 1s ease-in-out both;
+$slide-in-right: slide-in-right 1s ease-in-out both;
+
+
+ 

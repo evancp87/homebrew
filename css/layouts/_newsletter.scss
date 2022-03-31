@@ -1,0 +1,77 @@
+@use '../abstracts' as a;
+/* newsletter section */
+.subscribe {
+  display: flex;
+  flex-direction: row;
+  display: inline-block;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: 1px;
+}
+
+.newsletter-form {
+  margin: 0 auto;
+  padding: 0;
+  color: a.$amber;
+  max-width: 1170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em 0 0 0;
+
+  .input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+
+   .input-fields {
+     margin-left: 0;
+     margin-top: 1em;
+   }
+    input:nth-of-type(2) {
+      margin-left: -5px;
+    }
+
+    
+  }
+}
+
+// section:nth-of-type(7) {
+//     margin-top: 6em;
+//     padding: 1px;
+//     margin-bottom: 3em;
+//   }
+
+.subscribe .input[type="email"] + input[type="button"] {
+  margin: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .newsletter-form {
+    // margin: 0 auto;
+    padding: 0;
+    color: a.$amber;
+    // max-width: 1170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .input {
+      flex-direction: row;
+      margin-right: 0.5em;
+
+      .input-fields {
+        margin-left: 1em;
+        margin-top: 0;
+      }
+
+    }
+  }
+}
+
+
+@media only screen and (max-width: 300px) {
+  .input-fields input[type="email"] {
+    max-width: 100px;
+  }
+}

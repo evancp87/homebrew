@@ -225,6 +225,7 @@ input[type="submit"]:hover {
 
 /* stories section hover pop up text ends*/
 
+/* TODO: find out where this belongs */
 section {
   display: flex;
   flex-direction: column;
@@ -249,10 +250,12 @@ button {
   background-color: var(--beige);
 }
 
+
 .gradient {
   background-color: red;
   background-image: linear-gradient(#e6a415, rgb(185, 180, 98));
 }
+
 
 h2 {
   font-weight: 400;
@@ -345,6 +348,7 @@ h2 {
 
 /* footer ends */
 
+/* TODO: find place for these */
 section picture {
   flex-basis: 10rem;
 }
@@ -421,7 +425,7 @@ nav ul li:hover {
 }
 
 /* nav bar children/grandchildren styling ends */
-
+/* TODO: check these end up in the correct place*/
 .about h2 {
   font-size: 3rem;
   color: var(--amber);
@@ -444,7 +448,7 @@ section:first-of-type {
     background-image: url(../Images/Mediumbeer.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     position: relative;
     padding: 3.5em;
     max-width: 100vw;
@@ -504,6 +508,7 @@ section:first-of-type {
     opacity: 0.5;
     animation: floatingbubbles 25s linear infinite,
       sideWays 6s ease-in-out infinite alternate;
+      /* TODO: add animation-delay as property */
   }
 
   .x2 {

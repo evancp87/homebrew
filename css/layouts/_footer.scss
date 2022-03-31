@@ -1,0 +1,128 @@
+@use '../abstracts/' as a;
+
+/* footer */
+
+// TODO: check if belongs here
+
+
+//TODO: check if belongs here
+
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    padding: 30px;
+    color: a.$white;
+  }
+
+  .gradient {
+    @include a.background-gradient(red, linear-gradient(a.$gradient-amber, a.$gradient-yellow));
+  }
+  
+  .footer > * {
+    flex: 1 100%;
+  }
+  
+  .l-footer {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .footer li {
+    line-height: 2em;
+  }
+  
+  .footer a {
+    text-decoration: none;
+  }
+  
+  .r-footer {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  .r-footer > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+  }
+  
+  .box a {
+    color: a.$footer-grey;
+  }
+  
+  .h-box {
+    column-count: 2;
+    column-gap: 1.25em;
+  }
+  
+  .b-footer {
+    text-align: center;
+    color: a.$footer-grey;
+    padding-top: 50px;
+  }
+  
+  .l-footer h2 {
+    padding-right: 20%;
+    color: a.$white;
+    font-size: 2em;
+  }
+  
+  /* footer ends */
+  
+
+  /* footer specifity styling */
+.box li img {
+  display: flex;
+  flex-direction: row;
+  width: 40px;
+  margin: 5px;
+}
+
+.social-media {
+  display: flex;
+}
+/* footer specifity styling ends */
+
+
+@media only screen and (max-width: 600px) {
+  
+  .footer ul {
+    margin: 30px 1px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+
+  .r-footer > * {
+    flex: 1;
+  }
+
+  .box li img {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    margin: 5px;
+  }
+
+  .features {
+    flex-grow: 2;
+  }
+
+  .l-footer {
+    flex: 1 0px;
+  }
+
+  .r-footer {
+    flex: 2 0px;
+  }
+
+  /* footer ends */
+
+
+}

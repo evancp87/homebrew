@@ -1,0 +1,25 @@
+{
+  "name": "homebrew",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evancp87/evan-parker-final-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evancp87/evan-parker-final-project/issues"
+  },
+  "homepage": "https://github.com/evancp87/evan-parker-final-project#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  },
+  "devDependencies": {
+    "sass": "^1.47.0"
+  }
+}

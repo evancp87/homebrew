@@ -1,0 +1,174 @@
+@use '../abstracts' as a;
+
+// navbar
+.nav-b {
+    display: flex;
+    height: auto;
+    width: 100%;
+    background-color: a.$amber;
+    justify-content: flex-end;
+    position: fixed;
+    opacity: 0.9;
+    padding: 0 15px;
+    z-index: 5;
+    transition: 0.5s ease-in-out;
+
+    /* navbar logo */
+    .logo {
+      font-weight: 700;
+      padding: 3px 10px 7.5px 0;
+      justify-content: center;
+      flex: 0 1 50rem;
+      font-size: 2rem;
+      margin-right: 100px;
+      color: a.$white;
+
+      a:hover {
+        color: scale-color($color: a.$white, $lightness: -10%);
+  transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+  
+  /* hamburger menu bars */
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3 ease in;
+    background-color: #000;
+  }
+  
+  
+
+/* nav bar children/grandchildren styling */
+
+// change
+.nav-b ul {
+  display: flex;
+  margin: 10px;
+}
+
+.nav-b .nav-menu .nav-item {
+  cursor: pointer;
+  padding: 0.5rem;
+  flex: auto;
+  text-align: center;
+
+}
+
+ .nav-item  a:hover {
+  color: a.$white;
+  transition: all 0.5s ease-in-out;
+}
+
+// nav ul li {
+//   cursor: pointer;
+//   padding: 0.5rem;
+//   flex: auto;
+//   text-align: center;
+// }
+
+.nav-b li {
+  justify-content: space-around;
+
+  margin: 5px;
+  max-width: 100%;
+}
+
+.hamburger {
+margin-top: 1em;
+
+}
+// nav ul li:hover {
+//   color: a.$amber;
+//   transition: all 0.5s ease-in-out;
+// }
+
+/* nav bar children/grandchildren styling ends */
+
+@media only screen and (max-width: 600px) {
+/* mobile toggable menu */
+.nav-menu {
+  position: fixed;
+  left: -125%;
+  top: 4.2rem;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.8s ease-in-out;
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+
+  // .nav-menu.active {
+  //   left: 0;
+  // }
+}
+
+.nav-menu.active {
+  left: 0;
+}
+/* mobile toggable menu ends*/
+
+
+// .logo:hover {
+//   color: white;
+//   transition: all 0.5s ease-in-out;
+// }
+}
+
+
+@media only screen and (min-width: 600px) {
+
+.nav-b {
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.logo {
+  font-weight: 700;
+  padding: 3px 10px 7.5px 0;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.nav-b ul {
+  display: flex;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-b li {
+  justify-content: space-around;
+  padding: 5px;
+
+  margin: 5px;
+  max-width: 100%;
+}
+
+.hamburger {
+display: none;
+}
+}
+
+@media only screen and (min-width: 900px) {
+  .logo {
+    font-weight: 700;
+    padding: 3px 10px 7.5px 0;
+    justify-content: center;
+    font-size: 2rem;
+  }
+
+}
+
+@media only screen and (max-width: 350px) {
+  .logo {
+    font-size: 1.5rem;
+    margin-right: 2em;
+  }
+}
