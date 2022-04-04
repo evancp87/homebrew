@@ -1409,16 +1409,35 @@ input[type=submit]:hover {
 }
 .about-us {
   display: flex;
-  display: inline-block;
   text-align: center;
   padding: 0.7em;
-  border-bottom: 1px solid #000;
-  margin-top: 5px;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .about-us .about-blurb {
   font-size: 1rem;
 }
-.about-us .about-blurb h2 {
+.about-us .about-blurb :nth-child(1) {
+  color: #e6b515;
+  margin: 0 0 1em 0;
+}
+.about-us .about-blurb :nth-child(2) {
+  margin-bottom: 1em;
+}
+
+.grid-row .grid-half {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  margin-top: 3em;
+}
+.grid-row .grid-half > p {
+  margin: 0 2em 1em 2em;
+  font-weight: 400;
   color: #e6b515;
 }
 
@@ -1438,11 +1457,6 @@ input[type=submit]:hover {
   align-items: center;
 }
 
-.about h2 {
-  font-size: 3rem;
-  color: #e6b515;
-}
-
 .scrolled.fade-in-bottom {
   animation: fade-in-bottom 1s ease-in-out both;
 }
@@ -1457,7 +1471,6 @@ input[type=submit]:hover {
     opacity: 1;
   }
 }
-/* TODO: find place for these */
 @media only screen and (min-width: 600px) {
   /* for stories section grid styling and order */
   .grid-row {
@@ -1474,12 +1487,14 @@ input[type=submit]:hover {
     max-width: 50%;
     justify-content: center;
     align-items: center;
-  }
-  .grid-row .grid-half .grid-content > * {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    margin-top: 0;
+  }
+  .grid-row .grid-half > p {
+    margin: 0 2em 1em 2em;
+    font-weight: 400;
+    color: #e6b515;
   }
 
   .first-order {
@@ -1525,10 +1540,7 @@ input[type=submit]:hover {
     padding: 7rem;
   }
   .about-us .about-blurb {
-    font-size: 2.5em;
-  }
-  .about-us .about-blurb h2 {
-    color: #e6b515;
+    font-size: 2em;
   }
 }
 /* footer */

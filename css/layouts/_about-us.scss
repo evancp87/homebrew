@@ -1,46 +1,49 @@
 @use '../abstracts/' as a;
 
-// section {
-//     display: flex;
-//     flex-direction: column;
-//     padding: 1em;
-//     padding-bottom: 5em;
-//   }
-
-
-
-// section img {
-//     min-height: 100%;
-//     max-width: 100%;
-//     min-width: 100%;
-//   }
-  
-  // section:first-of-type {
-  //   padding: 0.7em;
-  //   border-bottom: 1px solid #000;
-  //   margin-top: 5px;
-  // }
   
 .about-us {
     display: flex;
-    display: inline-block;
     text-align: center;
     padding: 0.7em;
-    border-bottom: 1px solid #000;
-    margin-top: 5px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .about-blurb {
   
       font-size: 1rem;
 
-      h2 {
+      :nth-child(1) {
         color: a.$amber;
+        margin: 0 0 1em 0;
   
       }
+      :nth-child(2) {
+        margin-bottom: 1em;
+      }
+      
     }
   }
   
-  
+  .grid-row {
+
+    .grid-half {
+      justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin-top: 3em;
+
+    > p {
+      margin: 0 2em 1em 2em;
+    font-weight: 400;
+    color:a.$amber;
+    }
+    }
+   
+  }
   /* for Javascript image transistions */
   .js-scroll {
     opacity: 0;
@@ -59,11 +62,7 @@
 }
 
 
-.about h2 {
-    font-size: 3rem;
-    color: a.$amber;
-  }
-  
+
   
   // on scroll animations for mobile devices
   
@@ -82,42 +81,9 @@
     }
   }
 
-  /* TODO: find place for these */
-// section picture {
-//     flex-basis: 10rem;
-//   }
   
-//   section div {
-//     flex-basis: 5rem;
-//   }
   
   @media only screen and (min-width: 600px) {
-// TODO: check this
-  // section {
-  //   margin: 0;
-  //   padding: 0;
-  // }
-
-
-  // section p {
-  //   text-align: center;
-  //   padding: 2em;
-  // }
-
-  // section:first-of-type {
-  //   padding: 2.5rem;
-  //   border-bottom: 1px solid #000;
-  //   margin: 10px;
-  // }
-
-
-  // section:nth-of-type(6) {
-  //   margin-top: 50px;
-  // }
-  // section button {
-  //   margin: 0 auto;
-  //   padding: 0.8em;
-  // }
 
 
   /* for stories section grid styling and order */
@@ -137,23 +103,22 @@
       max-width: 50%;
       justify-content: center;
       align-items: center;
-
-      // > p {
-      //   justify-content: center;
-      //   align-items: center;
-      // }
-
-    .grid-content > * {
-      display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+      display: flex;
+      margin-top: 0;
+
+
+       > p {
+        margin: 0 2em 1em 2em;
+        font-weight: 400;
+        color: a.$amber;
+      }
+
     }
 
   }
 
-
+// setting order of grid sections for images and text
   .first-order {
     order: 0;
   }
@@ -162,7 +127,7 @@
     order: 1;
   }
 
-
+// js scroll animations for grid sections
   .scrolled.slide-left {
     animation: slide-in-left 1s ease-in-out both;
   }
@@ -204,23 +169,16 @@
 
 
   @media only screen and (min-width: 900px) {
-    // section p {
-    //     text-align: center;
-    //     // padding: 5em;
-    //   }
-
    
+
 
     .about-us {
       padding: 7rem;
 
       .about-blurb {
   
-        font-size: 2.5em;
-        h2 {
-          color: a.$amber;
-  
-        }
+        font-size: 2em;
+       
       }
     }
 }
