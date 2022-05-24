@@ -1,51 +1,122 @@
 @use './colors' as c;
 // mixin for gradient
-  @mixin background-gradient($bg-color, $bg-image) {
-      background-color: $bg-color;
-      background-image: $bg-image;
+@mixin background-gradient($bg-color, $bg-image) {
+  background-color: $bg-color;
+  background-image: $bg-image;
+}
+
+@mixin bgGradient($color) {
+  background-image: linear-gradient(lighten($color, 12%) 0%, $color 70%);
+}
+
+// vendor prefix mixin
+
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{"-" + $prefix + "-" + $property}: $value;
+    #{$property}: $value;
+  }
+}
+
+// mixin for writing flexbox DRY
+@mixin flexbox-config(
+  $justify-content: false,
+  $flex: false,
+  $flex-direction: false,
+  $align-items: false
+) {
+  display: flex;
+
+  @if $justify-content != false {
+    justify-content: $justify-content;
   }
 
+  @if $flex != false {
+    flex: $flex;
+  }
 
-//   @mixin floating-bubbles ($i, $animTime, $totalTime, $delay) {
-// @include keyframes(bubble#{$i})
-//   }
+  @if $flex-direction != false {
+    flex-direction: $flex-direction;
+  }
 
-//   @mixin sideways (){
+  @if $align-items != false {
+    align-items: $align-items;
+  }
+}
 
-//   }
-  // https://kittygiraudel.com/2014/07/16/automating-css-animations-with-sass/
-  // https://glennmccomb.com/articles/creating-smooth-sequential-animations-with-sass/
-// https://css-tricks.com/repeatable-staggered-animation-three-ways-sass-gsap-web-animations-api/
-  
-  // @mixin bubble-animation ($keyframes, $bubble, $animation-name: 'bubbles') {
+// Media query mixins
 
-  //   @if unitless($static) {
-  //     $static: percentage($static);
-  //   }
-  //   $animating: (100% - $frames * $static) / ($frames - 1);
-  //   @at-root {
-  //     @keyframes #{$animation-name} {
-  //       @for $i from 0 to $frames {
-  //         $current-frame: $i * $static + $i * $animating;
-  //         $next-frame: ($i + 1) * $static + $i * $animating;
-  //         $halfway-frame: $i * $static / 1% + ($i - 1) * $animating + $animating / 2;
-  //         @if $i > 0 {
-  //           #{$halfway-frame} {
-  //             filter: blur(2px);
-  //           }
-  //         }
-  //         #{$current-frame, $next-frame} {
-  //           transform: translateX($i * -100% / $frames);
-  //           filter: blur(0);
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-  // @include carousel-animation(5, 17.5%);
+@mixin xl-screens {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
 
-//    $background-gradient: a$.gradient {
-//     background-color: red;
-//     background-image: linear-gradient($gradient-amber:, $gradient-yellow);
-//   }
+@mixin xl-tablets {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin lg-tablets {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+@mixin md-tablets {
+  @media (min-width: 700px) {
+    @content;
+  }
+}
+@mixin md-tablets-v2 {
+  @media (min-width: 650px) {
+    @content;
+  }
+}
 
+@mixin sm-tablets {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin sm-tablets-max-width {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin sm-tablets-v2 {
+  @media (max-width: 550px) {
+    @content;
+  }
+}
+@mixin xs-tablets {
+  @media (min-width: 500px) {
+    @content;
+  }
+}
+@mixin xs-tablets-v2 {
+  @media (min-width: 450px) {
+    @content;
+  }
+}
+@mixin main-phone-breakpoint {
+  @media (min-width: 400) {
+    @content;
+  }
+}
+@mixin md-phone {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+@mixin extra-sm-phones {
+  @media (min-width: 300px) {
+    @content;
+  }
+}
+
+@mixin extra-sm-phones-max {
+  @media (max-width: 300px) {
+    @content;
+  }
+}

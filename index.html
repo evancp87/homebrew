@@ -16,7 +16,7 @@
     href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awseome/5.13.0/css/all.min.css">
-<link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <!-- <link rel="stylesheet" href="./css/main.css" /> -->
 </head>
 
@@ -25,40 +25,41 @@
 
   <nav class='nav-b' id="nav-bar">
 
-    <ul class='logo-container'>
-      <li class="logo"><a href="./index.html">HomeBrew</a></li>
+    <ul class='nav-b__logo-container'>
+      <li class="nav-b__logo"><a href="./index.html">HomeBrew</a></li>
     </ul>
 
-    <ul class="nav-menu" id="nav-menu">
+    <ul class="nav-b__nav-menu" id="nav-menu">
 
-      <li class='nav-item'><a href="./our-story/index.html">Our Story</a></li>
-      <li class='nav-item'><a href="#">Shop</a></li>
-      <li class='nav-item'><a href="./boxes/index.html">Boxes</a></li>
-      <li class='nav-item'><a href="./how-to-homebrew/index.html">How to HomeBrew</a></li>
-      <li class="nav-item subscribe-btn"><a id="demo01" href="#animatedModal">Subscribe</a></li>
+      <li class='nav-b__nav-item'><a href="./our-story/index.html">Our Story</a></li>
+      <li class='nav-b__nav-item'><a href="#">Shop</a></li>
+      <li class='nav-b__nav-item'><a href="./boxes/index.html">Boxes</a></li>
+      <li class='nav-b__nav-item'><a href="./how-to-homebrew/index.html">How to HomeBrew</a></li>
+      <li class="nav-b__nav-item--subscribe-btn"><a id="demo01" href="#animatedModal">Subscribe</a></li>
     </ul>
-    
-    <div class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
+
+    <div class="nav-b__hamburger">
+      <span class="nav-b__bar "></span>
+      <span class="nav-b__bar "></span>
+      <span class="nav-b__bar "></span>
     </div>
   </nav>
 
   <header class="header-img">
 
-    
-      <article class='header-text'>
 
-        <h1 class='tagline'>We do what we do,
-          so you can HomeBrew!</h1>
-        <p class='consumer-question'>Did you know that brewing your own beer is really easy? Let us help you with our range of starter kits,
-          boxes, and our shop of own brand beer!</p>
+    <div class='homepage-header-text'>
 
-      </article>
+      <h1 class='tagline'>We do what we do,
+        so you can HomeBrew!</h1>
+      <p class='consumer-question'>Did you know that brewing your own beer is really easy? Let us help you with our
+        range of starter kits,
+        boxes, and our shop of own brand beer!</p>
+
+    </div>
 
   </header>
- 
+
 
 
 
@@ -67,29 +68,29 @@
 
     <section class="about-us">
 
-      <article class='about-blurb'>
+      <div class='about-blurb'>
         <h2>About us
         </h2>
         <p>HomeBrew began as a covid-19 pandemic lockdown project between 4 likeminded friends. Not open? No problem! We
           created HomeBrew after we realised how easy it is to brew beer, and wanted to get people brewing their own. We
           offer a range of starter kits and monthly recipe boxes, alongside our own personal beers, and a small range of
           international beers.
-        </article>
+      </div>
       <button class='btn'><a href="./our-story/index.html">Our Story</a></button>
     </section>
 
-  <section class="grid-row js-scroll fade-in-bottom slide-right">
-    <div class="grid-column grid-half">
-      <picture> <img src="./Images/Circusbeer.JPG" alt="Circus Beer" />
-      </div>
-      
+    <section class="grid-row js-scroll fade-in-bottom slide-right">
       <div class="grid-column grid-half">
-        <p> Ordering from us couldn't be any easier </p>
-        <button  class='btn'><a href="#">How it works</a></button>
+        <picture> <img src="./Images/Circusbeer.JPG" alt="Circus Beer" />
       </div>
-      
+
+      <div class="grid-column grid-half">
+        <p class="grid-column-text"> Ordering from us couldn't be any easier </p>
+        <button class='btn'><a href="#">How it works</a></button>
+      </div>
+
     </section>
-    
+
     <section class="shop grid-row js-scroll fade-in-bottom slide-left">
       <div class="grid-column grid-half second-order">
         <picture><img src="./Images/bottles.png" alt="bottles" />
@@ -97,11 +98,11 @@
       </div>
       <div class="grid-column grid-half first-order">
 
-         <p>Browse our range of homemade beers</p>
-         <button class='btn'>Shop</button>
+        <p class="grid-column-text">Browse our range of homemade beers</p>
+        <button class='btn'>Shop</button>
       </div>
     </section>
-    
+
     <section class="boxes grid-row js-scroll fade-in-bottom slide-right">
       <div class="grid-column grid-half ">
         <picture><img src="./Images/Lavenderbeer.JPG" alt="HomeBrew in Lavender Bush" />
@@ -109,31 +110,32 @@
       </div>
       <div class="grid-column grid-half">
 
-        <p>Learn how to brew beer with our range of starter kits, monthly beer boxes, and more</p>
+        <p class="grid-column-text">Learn how to brew beer with our range of starter kits, monthly beer boxes, and more
+        </p>
         <button class='btn'><a href="./boxes/index.html">Browse our boxes</a></button>
       </div>
-      
-      
+
+
     </section>
-    
-    
+
+
     <section class="how-to grid-row js-scroll fade-in-bottom slide-left">
       <div class="grid-column grid-half second-order">
-        <picture> 
+        <picture>
           <img src="./Images/brewerysetup.JPG" alt="HomeBrew Setup">
         </picture>
       </div>
       <div class="grid-column grid-half first-order">
-       
-        <p>
+
+        <p class="grid-column-text">
           You can HomeBrew too! Find out how here.
-          
+
         </p>
         <button class='btn'><a href="./how-to-homebrew/index.html">How to Homebrew</a></button>
-     
+
       </div>
     </section>
-    
+
 
 
     <section class="stories">
@@ -174,9 +176,7 @@
             London</p>
         </li>
 
-        <li class="img-wrap"><img
-            src="./Images/cheers.jpeg"
-            alt="Drinks cheers">
+        <li class="img-wrap"><img src="./Images/cheers.jpeg" alt="Drinks cheers">
           <p class="img-description">"I have nothing but good words for HomeBrew" Ben, Glasgow</p>
         </li>
         <li class="img-wrap"><img src="./Images/carousel7.JPG" alt="Friends chilling in the park">
@@ -202,7 +202,7 @@
           </div>
         </form>
       </div>
-      </section>
+    </section>
 
   </main>
 
@@ -211,16 +211,16 @@
 
 
 
-  <footer class="footer gradient">
-    <div class="l-footer">
+  <footer class="footer footer--gradient">
+    <div class="footer__l-footer">
       <h2>
         Homebrew</h2>
     </div>
-    <ul class="r-footer">
+    <ul class="footer__r-footer">
       <li>
         <h2>
           Social</h2>
-        <ul class="box social-media">
+        <ul class="footer__box footer__box--social-media">
 
           <li><a href="https://twitter.com/?lang=en-gb" target="_blank">
               <picture><img src="./Images/Twitter.png"></picture>
@@ -234,10 +234,10 @@
 
         </ul>
       </li>
-      <li class="features">
+      <li class="footer__features">
         <h2>
           Links</h2>
-        <ul class="box h-box">
+        <ul class="footer__box footer__box--h-box">
           <li><a href="./our-story/index.html">Our Story</a></li>
           <li><a href="#">Shop</a></li>
           <li><a href="./boxes/index.html">Boxes</a></li>
@@ -248,15 +248,15 @@
       <li>
         <h2>
           Features</h2>
-        <ul class="box">
+        <ul class="footer__box">
           <li><a href="#">Blog</a></li>
           <li><a href="#">Press</a></li>
           <li><a href="#">Careers</a></li>
         </ul>
       </li>
     </ul>
-    <div class="b-footer">
-      <p>
+    <div class="footer__b-footer">
+      <p class="footer__copyright">
         Copyright ©HomeBrew 2021 </p>
     </div>
 
@@ -324,7 +324,7 @@
             </select>
           </div>
 
-          <div>
+          <div class="modal-submit-button">
             <input type="submit" value="HomeBrew Now!" />
           </div>
       </div>

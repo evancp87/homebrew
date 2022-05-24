@@ -17,18 +17,9 @@
     opacity: 0;
     font-size: 1em;
     transition: opacity 0.2s, visibility 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    
-
+    @include a.flexbox-config($justify-content: center, $align-items: center);
   }
-  
-  
 }
-
-
 
 .img-wrap:hover .img-description {
   visibility: visible;
@@ -37,43 +28,30 @@
 
 // add sass variable
 .stories {
-  background-color: a.$beige;  margin-top: 2rem;
+  background-color: a.$beige;
+  margin-top: 2rem;
 }
 
+@media only screen and (max-width: a.$tablet-breakpoint) {
+  .stories ul {
+    flex-direction: row;
+  }
 
-/* TODO: find place for these */
-// section picture {
-//     flex-basis: 10rem;
-//   }
-  
-//   section div {
-//     flex-basis: 5rem;
-//   }
-  
+  .stories li {
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
 
-  @media only screen and (max-width: 600px) {
-    
-    .stories ul {
-      flex-direction: row;
-    }
-  
-    .stories li {
-      height: auto;
-      width: 100%;
-      margin: 0;
-    }
-  
-    .stories img {
-      max-width: 100%;
-      max-height: 75vh;
-      min-width: 0;
-    }
+  .stories img {
+    max-width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
 }
 
-
-
-@media only screen and (min-width: 600px) {
-.stories ul {
+@media only screen and (min-width: a.$tablet-breakpoint) {
+  .stories ul {
     display: flex;
     flex-wrap: wrap;
   }
@@ -93,18 +71,16 @@
   /* stories section ends */
 }
 
-
-@media only screen and (min-width: 900px) {
-
-    .stories li {
-        height: 40vh;
-        flex-grow: 1;
-        margin: 5px;
-      }
+@media only screen and (min-width: a.$large-tablet-breakpoint) {
+  .stories li {
+    height: 40vh;
+    flex-grow: 1;
+    margin: 5px;
+  }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-    .img-description {
-      font-size: 1em;
-    }
+@media only screen and (min-width: a.$tablet-breakpoint) and (max-width: a.$large-tablet-breakpoint) {
+  .img-description {
+    font-size: 1em;
   }
+}

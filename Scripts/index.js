@@ -1,20 +1,17 @@
-console.log('hello world');
+console.log("hello world");
 
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-hamburger.addEventListener('click', mobileMenu);
+const hamburger = document.querySelector(".nav-b__hamburger");
+const navMenu = document.querySelector(".nav-b__nav-menu");
 
 function mobileMenu() {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+  hamburger.classList.toggle("active");
 
+  navMenu.classList.toggle("active");
 }
 
-
+hamburger.addEventListener("click", mobileMenu);
 
 // on scroll events
-
 
 const scrollElements = document.querySelectorAll(".js-scroll");
 
@@ -48,34 +45,31 @@ const handleScrollAnimation = () => {
     if (elementInView(el, 1.25)) {
       displayScrollElement(el);
     } else if (elementOutofView(el)) {
-      hideScrollElement(el)
+      hideScrollElement(el);
     }
-  })
-}
-
-window.addEventListener("scroll", () => { 
-    handleScrollAnimation();
   });
+};
 
+window.addEventListener("scroll", () => {
+  handleScrollAnimation();
+});
 
+let prevScrollpos = 0;
 
-  let prevScrollpos = 0;
-
-  window.onscroll = function() {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      document.getElementById("nav-bar").style.top = "0";
-      document.getElementById("nav-menu").style.top =  "65px";
-    } else {
-      document.getElementById("nav-bar").style.top = "-110px";
-      document.getElementById("nav-menu").style.top = "-300px";
-    }
-    prevScrollpos = currentScrollPos;
+window.onscroll = function () {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("nav-bar").style.top = "0";
+    document.getElementById("nav-menu").style.top = "7%";
+  } else {
+    document.getElementById("nav-bar").style.top = "-110px";
+    document.getElementById("nav-menu").style.top = "-300px";
   }
+  prevScrollpos = currentScrollPos;
+};
 
-
-
-
-
-
-  
+// copyright date
+const date = new Date();
+const year = date.getFullYear();
+const copyrightYear = document.querySelector(".footer__copyright");
+copyrightYear.innerHTML = `Copyright ©HomeBrew ${year}`;

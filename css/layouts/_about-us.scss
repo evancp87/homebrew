@@ -1,58 +1,54 @@
 @use '../abstracts/' as a;
 
-  
 .about-us {
-    display: flex;
-    text-align: center;
-    padding: 0.7em;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  @include a.flexbox-config(
+    $flex-direction: column,
+    $justify-content: center,
+    $align-items: center
+  );
+  text-align: center;
+  padding: 0.7em;
+  margin-top: 1em;
+  margin-bottom: 2em;
 
-    .about-blurb {
-  
-      font-size: 1rem;
+  .about-blurb {
+    font-size: 1rem;
 
-      :nth-child(1) {
-        color: a.$amber;
-        margin: 0 0 1em 0;
-  
-      }
-      :nth-child(2) {
-        margin-bottom: 1em;
-      }
-      
+    :nth-child(1) {
+      color: a.$amber;
+      margin: 0 0 1em 0;
+    }
+    :nth-child(2) {
+      margin-bottom: 1em;
     }
   }
-  
-  .grid-row {
+}
 
-    .grid-half {
-      justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    display: flex;
+.grid-row {
+  .grid-half {
+    @include a.flexbox-config(
+      $flex-direction: column,
+      $justify-content: center,
+      $align-items: center
+    );
     margin-top: 3em;
 
-    > p {
-      margin: 0 2em 1em 2em;
-    font-weight: 400;
-    color:a.$amber;
+    > .grid-column-text {
+      margin: 0 1em 2em 2em;
+      font-weight: 400;
+      color: a.$amber;
     }
-    }
-   
   }
-  /* for Javascript image transistions */
-  .js-scroll {
-    opacity: 0;
-    transition: opacity 500ms;
-  }
-  
-  .js-scroll.scrolled {
-    opacity: 1;
-  }
+}
+/* for Javascript image transistions */
+.js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
+}
 
 //   * main sections */
 .shop .boxes .how-to {
@@ -61,64 +57,61 @@
   align-items: center;
 }
 
+// on scroll animations for mobile devices
 
+.scrolled.fade-in-bottom {
+  -webkit-animation: fade-in-bottom 1s ease-in-out;
+  -moz-animation: fade-in-bottom 1s ease-in-out;
+  -ms-animation: fade-in-bottom 1s ease-in-out;
+  animation: fade-in-bottom 1s ease-in-out;
+}
 
-  
-  // on scroll animations for mobile devices
-  
-  .scrolled.fade-in-bottom {
-    animation: fade-in-bottom 1s ease-in-out both;
-  }
-  
-  @keyframes fade-in-bottom {
-    0% {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
+@keyframes fade-in-bottom {
+  0% {
+    @include a.prefix(transform, translateY(50px), ms moz webkit);
+
+    // transform: translateY(50px);
+    opacity: 0;
   }
 
-  
-  
-  @media only screen and (min-width: 600px) {
+  100% {
+    @include a.prefix(transform, translateY(0), ms moz webkit);
 
+    // transform: translateY(0);
+    opacity: 1;
+  }
+}
 
+@media only screen and (min-width: a.$tablet-breakpoint) {
   /* for stories section grid styling and order */
   .grid-row {
-    display: flex;
-    flex-direction: row;
-    
+    @include a.flexbox-config($flex-direction: row);
+
     .grid-column {
       flex-grow: 1;
       flex-shrink: 1;
       flex-basis: auto;
       margin: 0;
-      
     }
 
     .grid-half {
       max-width: 50%;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      display: flex;
+      @include a.flexbox-config(
+        $flex-direction: column,
+        $justify-content: center,
+        $align-items: center
+      );
       margin-top: 0;
 
-
-       > p {
+      > .grid-column-text {
         margin: 0 2em 1em 2em;
         font-weight: 400;
         color: a.$amber;
       }
-
     }
-
   }
 
-// setting order of grid sections for images and text
+  // setting order of grid sections for images and text
   .first-order {
     order: 0;
   }
@@ -127,58 +120,60 @@
     order: 1;
   }
 
-// js scroll animations for grid sections
+  // js scroll animations for grid sections
   .scrolled.slide-left {
+    -webkit-animation: slide-in-left 1s ease-in-out both;
+    -moz-animation: slide-in-left 1s ease-in-out both;
+    -ms-animation: slide-in-left 1s ease-in-out both;
     animation: slide-in-left 1s ease-in-out both;
   }
 
   .scrolled.slide-right {
+    -webkit-animation: slide-in-right 1s ease-in-out both;
+    -moz-animation: slide-in-right 1s ease-in-out both;
+    -ms-animation: slide-in-right 1s ease-in-out both;
     animation: slide-in-right 1s ease-in-out both;
   }
-
- 
 
   @keyframes slide-in-left {
     0% {
       opacity: 0;
-      transform: translatex(-100px);
+      @include a.prefix(transform, translateX(-25px), ms moz webkit);
+
+      // transform: translatex(-100px);
     }
     100% {
       opacity: 1;
-      transform: translatex(0);
+      @include a.prefix(transform, translateX(0), ms moz webkit);
+
+      // transform: translatex(0);
     }
   }
 
   @keyframes slide-in-right {
     0% {
       opacity: 0;
-      transform: translatex(100px);
+      @include a.prefix(transform, translateX(25px), ms moz webkit);
+
+      // transform: translatex(100px);
     }
     100% {
       opacity: 1;
-      transform: translatex(0);
+      @include a.prefix(transform, translateX(0), ms moz webkit);
+
+      // transform: translatex(0);
     }
   }
 
   /* animation for images and Javascript ends*/
+}
 
+@media only screen and (min-width: a.$large-tablet-breakpoint) {
+  .about-us {
+    padding: 7rem;
 
-
-
-  }
-
-
-  @media only screen and (min-width: 900px) {
-   
-
-
-    .about-us {
-      padding: 7rem;
-
-      .about-blurb {
-  
-        font-size: 2em;
-       
-      }
+    .about-blurb {
+      font-size: 2em;
     }
+  }
 }

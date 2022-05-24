@@ -1,11 +1,10 @@
-@media only screen and (max-width: 350px) {
-    
-    .input {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .input input {
-      margin: 1em;
-    }
+@media only screen and (max-width: a.$md--mobile-tweakpoint) {
+  .input {
+    flex-direction: column;
+    align-items: center;
   }
+
+  .input input {
+    margin: 1em;
+  }
+}

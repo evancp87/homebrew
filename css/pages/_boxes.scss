@@ -1,45 +1,22 @@
-
 @use '../abstracts' as a;
 
 // TODO: build accordion for boxes information or research better UI/UX
 
-// * {
-//   box-sizing: border-box;
-// }
-
-// main {
-//   margin: 0 auto;
-//   padding: 60px;
-// }
-
-// section {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   text-align: center;
-// }
-
 .boxes-header {
-  // display: flex;
- 
-  margin: 4rem 2rem 2rem 0;
+  margin: 4rem 0 2rem 0;
   padding: 0;
 
   :nth-child(1) {
-    color: a.$amber
+    color: a.$amber;
   }
 
   :nth-child(3) {
-    margin: 1em 2em 0 0; 
+    margin: 1em 2em 0 0;
   }
 }
 
 .boxes-wrapper {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  // flex-wrap: wrap;
-  // flex-wrap: wrap;
+  @include a.flexbox-config($flex-direction: column, $align-items: center);
 }
 /* for carousels */
 .main-carousel {
@@ -69,13 +46,12 @@
 }
 
 .carousel-grid-row {
-  display: flex;
-  flex-direction: column;
+  @include a.flexbox-config($flex-direction: column);
 }
 
 .carousel-grid-column {
   border: 2px solid a.$amber;
-  // flex-wrap: wrap;
+  max-width: 400px;
 
   display: flex;
   flex: {
@@ -87,12 +63,9 @@
   margin: {
     top: 1em;
     bottom: 1em;
-  };
+  }
   align-items: center;
- 
 }
-
-
 
 /* smaller, dark, rounded square */
 .flickity-prev-next-button {
@@ -119,45 +92,32 @@
   right: -10px;
 }
 
-/* carousels end */
-
-// button:last-of-type {
-//   justify-content: center;
-// }
-
-// header > h2 {
-//   font-size: 1.5em;
-// }
-
-
 .carousel-content {
-  display: flex;
-  flex-direction: column;
+  @include a.flexbox-config($flex-direction: column);
+
   padding: 0;
   margin: 0;
 }
 
-
-
 @media only screen and (min-width: 600px) {
-  // section {
-  //   display: flex;
-  //   flex-direction: row;
-  // }
-
-  
   .carousel-grid-row {
-    display: flex;
-    flex-direction: column;
+    @include a.flexbox-config($flex-direction: column);
   }
   .carousel-grid-column {
     border: 2px solid a.$amber;
     margin-right: 10px;
   }
+  .boxes-header {
+    margin: 4rem 2rem 2rem 0;
+    padding: 0;
+
+    :nth-child(3) {
+      margin: 1em 2em 0 0;
+    }
+  }
 }
 .carousel-content {
-  display: flex;
-  flex-direction: column;
+  @include a.flexbox-config($flex-direction: column);
   padding: 2em;
   margin: 2em 0 2em 0;
 
@@ -170,28 +130,33 @@
   }
 }
 
-.boxes-header {
-  // display: flex;
- 
-  margin: 4rem 2rem 2rem 0;
-  padding: 0;
-
-  
-
-  :nth-child(3) {
-    margin: 1em 2em 0 0; 
-  }
-}
-
-
-@media only screen and (min-width: 1150px) {
+@media only screen and (min-width: a.$boxes-tweakpoint) {
   .boxes-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    // flex-wrap: wrap;
-    // flex-wrap: wrap;
+    @include a.flexbox-config($flex-direction: row, $align-items: baseline);
   }
-  
 }
-    
+
+@media only screen and (max-width: a.$lg-mobile-breakpoint) {
+  .main-carousel {
+    width: 75%;
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+  }
+
+  .carousel-cell {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    img {
+      max-width: 400px;
+      width: 250px;
+      height: auto;
+    }
+  }
+
+  .flickity-viewport {
+    height: 150px;
+  }
+}

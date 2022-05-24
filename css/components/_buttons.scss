@@ -1,6 +1,5 @@
 @use '../abstracts/' as a;
 
-
 %button {
   border-radius: 3px;
   background-color: a.$amber;
@@ -18,29 +17,22 @@
   }
 }
 
-  .btn {
+.btn {
+  @extend %button;
+}
 
-@extend %button;
+@media only screen and (min-width: 600px) {
+  .nav-b__nav-item--subscribe-btn {
+    display: flex;
+    align-self: flex-start;
+    background-color: a.$white;
+    border-radius: 5px;
+    max-width: 10em;
+    color: a.$amber;
+    &:hover {
+      background-color: transparent;
+      color: a.$white;
+      transition: 500ms ease-in-out;
+    }
   }
-
-
-
-
-  @media only screen and (min-width: 600px) {
-    .subscribe-btn {
-        display: flex;
-        align-self: flex-start;
-        background-color: a.$white;
-        border-radius: 5px;
-        max-width: 10em;
-        color: a.$amber;
-        &:hover {
-          background-color: transparent;
-          color: a.$white;
-          transition: 500ms ease-in-out;
-        }
-      }
-    
-    
-
-  }
+}

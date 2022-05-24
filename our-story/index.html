@@ -17,38 +17,39 @@
   <link rel="stylesheet" href="../plugins/animate.min.css">
   <!-- <link rel="stylesheet" href="../css/global.css" />
   <link rel="stylesheet" href="./ourstory.css" /> -->
-<link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
 <body>
 
-  <nav class='nav-b'id="nav-bar">
+  <nav class='nav-b' id="nav-bar">
 
     <ul>
-      <li class="logo"><a href="../index.html">HomeBrew</a></li>
+      <li class="nav-b__logo"><a href="../index.html">HomeBrew</a></li>
     </ul>
 
-    <ul class="nav-menu" id="nav-menu">
+    <ul class="nav-b__nav-menu" id="nav-menu">
 
-      <li class='nav-item'><a href="../our-story/index.html">Our Story</a></li>
-      <li class='nav-item'><a href="#">Shop</a></li>
-      <li class='nav-item'><a href="../boxes/index.html">Boxes</a></li>
-      <li class='nav-item'><a href="../how-to-homebrew/index.html">How to HomeBrew</a></li>
-      <li class="subscribe-btn"><a id="demo01" href="#animatedModal">Subscribe</a></li>
+      <li class='nav-b__nav-item'><a href="../our-story/index.html">Our Story</a></li>
+      <li class='nav-b__nav-item'><a href="#">Shop</a></li>
+      <li class='nav-b__nav-item'><a href="../boxes/index.html">Boxes</a></li>
+      <li class='nav-b__nav-item'><a href="../how-to-homebrew/index.html">How to HomeBrew</a></li>
+      <li class="nav-b__nav-item--subscribe-btn"><a id="demo01" href="#animatedModal">Subscribe</a></li>
     </ul>
     </ul>
-    <div class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
+    <div class="nav-b__hamburger">
+      <span class="nav-b__bar"></span>
+      <span class="nav-b__bar"></span>
+      <span class="nav-b__bar"></span>
     </div>
   </nav>
 
   <header class="about-header">
 
     <div class="header-text">
-      <h1><span><small>Our</small></span><span> Story</span></h1>
+      <h1 class="header-title"><span>
+          Our</span><span> Story</span></h1>
 
 
   </header>
@@ -56,14 +57,15 @@
 
   <main class='our-story-main'>
     <section class='about-us-txt'>
-      <article class="about-article">
+      <div class="about-article">
 
         <p class="about-copy">
           Hi, my name is Evan, and i love beer! Due to worldwide events in 2020 you may be familiar with, beer was in
           short supply throughout much of the UK. I could've simply stocked up on crates and crates of beer, or have
           gone without for months on end. Neither was an option I was willing to accept.</p>
 
-        <p class="about-copy">Lockdown was pretty lonely, and the days long. Work was pretty tough going and I needed to fill my evenings
+        <p class="about-copy">Lockdown was pretty lonely, and the days long. Work was pretty tough going and I needed to
+          fill my evenings
           with activities to stay sane. My friends were in a similar situation, and after many boozy zoom calls we came
           up with the idea of brewing our own beer to beat the drinks drought.</p>
 
@@ -74,7 +76,8 @@
           decided to keep that same energy going.
         </p>
 
-        <p class="about-copy">We became confident enough with our own brewing skills that we were able to quit our day jobs, and sell a
+        <p class="about-copy">We became confident enough with our own brewing skills that we were able to quit our day
+          jobs, and sell a
           small range of our individual homemade beer recipes. Although we're still a small startup, our ambitions were
           set high, and we have progressed to the point where our beers are stocked in small craft beer shops, we have
           been able to curate a small selection of international beers. Excitingly, we have expanded to include a range
@@ -82,20 +85,20 @@
           and how to guides. With the already expensive pre-pandemic average drink price soaring to over £6, now has
           never been a better time to just do it yourself.</p>
 
-        
 
 
-          <p class='about-copy' >
-            Love from - "The HomeBrew Crew" </p>
-          
-        </div>
-        <picture class="beer-photo"><img src="../Images/512px-Friends_cheers.jpg" alt="Friends giving cheers"></picture>
 
-      </article>
+        <p class='about-copy'>
+          Love from - "The HomeBrew Crew" </p>
+
+      </div>
+      <picture class="beer-photo"><img src="../Images/512px-Friends_cheers.jpg" alt="Friends giving cheers"></picture>
+
+      </div>
     </section>
 
 
-    
+
     <section class="subscribe ">
       <div>
 
@@ -112,19 +115,19 @@
           </div>
         </form>
       </div>
-      </section>
+    </section>
   </main>
 
-  <footer class="footer gradient">
-    <div class="l-footer">
+  <footer class="footer footer--gradient">
+    <div class="footer__l-footer">
       <h2>
         Homebrew</h2>
     </div>
-    <ul class="r-footer">
+    <ul class="footer__r-footer">
       <li>
         <h2>
           Social</h2>
-        <ul class="box social-media">
+        <ul class="footer__box footer__box--social-media">
 
           <li><a href="https://twitter.com/?lang=en-gb" target="_blank">
               <picture><img src="../Images/Twitter.png"></picture>
@@ -138,29 +141,29 @@
 
         </ul>
       </li>
-      <li class="features">
+      <li class="footer__features">
         <h2>
           Links</h2>
-        <ul class="box h-box">
-          <li><a href="../our-story/index.html">Our Story</a></li>
+        <ul class="footer__box footer__box--h-box">
+          <li><a href="./our-story/index.html">Our Story</a></li>
           <li><a href="#">Shop</a></li>
-          <li><a href="../boxes/index.html">Boxes</a></li>
-          <li><a href="../how-to-homebrew/index.html">How to HomeBrew</a></li>
+          <li><a href="./boxes/index.html">Boxes</a></li>
+          <li><a href="./how-to-homebrew/index.html">How to HomeBrew</a></li>
           <li><a href="#">Subscribe</a></li>
         </ul>
       </li>
       <li>
         <h2>
           Features</h2>
-        <ul class="box">
+        <ul class="footer__box">
           <li><a href="#">Blog</a></li>
           <li><a href="#">Press</a></li>
           <li><a href="#">Careers</a></li>
         </ul>
       </li>
     </ul>
-    <div class="b-footer">
-      <p>
+    <div class="footer__b-footer">
+      <p class="footer__copyright">
         Copyright ©HomeBrew 2021 </p>
     </div>
 
@@ -226,7 +229,7 @@
             </select>
           </div>
 
-          <div>
+          <div class="modal-submit-button">
             <input type="submit" value="HomeBrew Now!" />
           </div>
       </div>

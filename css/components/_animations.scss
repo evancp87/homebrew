@@ -1,236 +1,138 @@
-
-   
 @use '../abstracts' as a;
+@use 'sass:math';
 
-// https://kittygiraudel.com/2014/07/16/automating-css-animations-with-sass/
-// https://www.learnhowtoprogram.com/user-interfaces/movement-interactivity-frameworks/animations-and-movement-in-sass
-// https://glennmccomb.com/articles/creating-smooth-sequential-animations-with-sass/
-// https://css-tricks.com/repeatable-staggered-animation-three-ways-sass-gsap-web-animations-api/
-
+$bubble-count: 5;
 .bubble {
-    overflow: hidden;
-    width: 40px;
-    height: 40px;
-    background: a.$bubble-amber;
-    border-radius: 50%;
-    position: absolute;
-  }
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  background: a.$bubble-amber;
+  border-radius: 50%;
+  position: absolute;
+}
 
+@for $i from 1 through $bubble-count {
+  .bubble:nth-of-type(#{$i}) {
+    animation: floatingbubbles
+        #{(random(7) / 3) +
+        8}s
+        linear
+        infinite
+        #{random(7) /
+        2}s,
+      sideWays
+        #{(random(7) / 2) +
+        8}s
+        ease-in-out
+        infinite
+        alternate
+        #{(random(7) / 2) +
+        8}s;
+  }
+}
+
+.x1 {
+  left: 100px;
+  transform: scale(0.6);
+  opacity: 0.5;
+}
+
+.x2 {
+  left: 55px;
+  @include a.prefix(transform, scale(0.9), ms webkit moz);
+
+  opacity: 0.2;
+}
+
+.x3 {
+  left: 130px;
+  @include a.prefix(transform, scale(0.4), ms webkit moz);
+
+  opacity: 0.8;
+}
+
+.x4 {
+  left: 40px;
+  @include a.prefix(transform, scale(0.7), ms webkit moz);
+}
+
+.x5 {
+  left: 65px;
+  @include a.prefix(transform, scale(0.5), ms webkit moz);
+
+  opacity: 0.6;
+}
+
+@keyframes floatingbubbles {
+  0% {
+    opacity: 0;
+    top: 225px;
+  }
+  30% {
+    top: 200px;
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.7;
+    top: 0px;
+  }
+  100% {
+    opacity: 0;
+    top: 20px;
+  }
+}
+
+@keyframes sideWays {
+  0% {
+    margin-left: random(10) + px;
+  }
+  50% {
+    margin-left: random(200) + px;
+  }
+  100% {
+    margin-right: random(100) + px;
+  }
+}
+
+@media only screen and (min-width: a.$sm-mobile-breakpoint) {
   .x1 {
     left: 200px;
     transform: scale(0.6);
     opacity: 0.5;
-    animation: floatingbubbles 25s linear infinite,
-      sideWays 6s ease-in-out infinite alternate;
-      /* TODO: add animation-delay as property */
   }
 
   .x2 {
     left: 155px;
-    transform: scale(0.9);
+    @include a.prefix(transform, scale(0.9), ms webkit moz);
+
     opacity: 0.2;
-    animation: floatingbubbles 15s linear infinite,
-      sideWays 3s ease-in-out infinite alternate;
   }
 
   .x3 {
     left: 130px;
-    transform: scale(0.4);
+    @include a.prefix(transform, scale(0.4), ms webkit moz);
+
     opacity: 0.8;
-    animation: floatingbubbles 12s linear infinite,
-      sideWays 1s ease-in-out infinite alternate;
   }
 
   .x4 {
     left: 40px;
-    transform: scale(0.7);
-    opacity: 0.4;
-    animation: floatingbubbles 8s linear infinite,
-      sideWays 5s ease-in-out infinite alternate;
+    @include a.prefix(transform, scale(0.7), ms webkit moz);
   }
 
   .x5 {
     left: 55px;
-    transform: scale(0.5);
-    opacity: 0.6;
-    animation: floatingbubbles 20s linear infinite,
-      sideWays 4s ease-in-out infinite alternate;
-  }
+    @include a.prefix(transform, scale(0.5), ms webkit moz);
 
+    opacity: 0.6;
+  }
   @keyframes floatingbubbles {
     0% {
       opacity: 0;
-      top: 700px;
+      top: 200px;
     }
-    10% {
-      opacity: 0.6;
-      top: 650px;
-    }
-    90% {
-      opacity: 0.7;
-      top: 0px;
-    }
-    100% {
-      opacity: 0;
-      top: 20px;
-    }
-  }
-
-  @keyframes sideWays {
-    0% {
-      margin-left: 0px;
-    }
-    100% {
-      margin-left: 30px;
-    }
-  }
-  /* bubbles animations end */
-
-
-//   refactor to use calc and a function to calculate a random animation
-
-@media only screen and (max-width: 600px) {
-    .bubble {
-        overflow: hidden;
-        width: 40px;
-        height: 40px;
-        background: #f8d151;
-        border-radius: 50%;
-        position: absolute;
-      }
-    
-      .x1 {
-        left: 200px;
-        transform: scale(0.6);
-        opacity: 0.5;
-        animation: floatingbubbles 25s linear infinite,
-          sideWays 6s ease-in-out infinite alternate;
-          /* TODO: add animation-delay as property */
-      }
-    
-      .x2 {
-        left: 155px;
-        transform: scale(0.9);
-        opacity: 0.2;
-        animation: floatingbubbles 15s linear infinite,
-          sideWays 3s ease-in-out infinite alternate;
-      }
-    
-      .x3 {
-        left: 130px;
-        transform: scale(0.4);
-        opacity: 0.8;
-        animation: floatingbubbles 12s linear infinite,
-          sideWays 1s ease-in-out infinite alternate;
-      }
-    
-      .x4 {
-        left: 40px;
-        transform: scale(0.7);
-        opacity: 0.4;
-        animation: floatingbubbles 8s linear infinite,
-          sideWays 5s ease-in-out infinite alternate;
-      }
-    
-      .x5 {
-        left: 55px;
-        transform: scale(0.5);
-        opacity: 0.6;
-        animation: floatingbubbles 20s linear infinite,
-          sideWays 4s ease-in-out infinite alternate;
-      }
-    
-      @keyframes floatingbubbles {
-        0% {
-          opacity: 0;
-          top: 700px;
-        }
-        10% {
-          opacity: 0.6;
-          top: 650px;
-        }
-        90% {
-          opacity: 0.7;
-          top: 0px;
-        }
-        100% {
-          opacity: 0;
-          top: 20px;
-        }
-      }
-    
-      @keyframes sideWays {
-        0% {
-          margin-left: 0px;
-        }
-        100% {
-          margin-left: 30px;
-        }
-      }
-      /* bubbles animations end */
-    
-}
-
-
-@media only screen and (min-width: 600px) {
-/* bubbles animation */
-
-.bubble {
-    overflow: hidden;
-    width: 40px;
-    height: 40px;
-    background: #f8d151;
-    border-radius: 50%;
-    position: absolute;
-  }
-
-  .x1 {
-    left: 50px;
-    transform: scale(0.6);
-    opacity: 0.5;
-    animation: floatingbubbles 20s linear infinite,
-      sideWays 2s ease-in-out infinite alternate;
-  }
-
-  .x2 {
-    left: 90x;
-    transform: scale(0.8);
-    opacity: 0.2;
-    animation: floatingbubbles 15s linear infinite,
-      sideWays 3s ease-in-out infinite alternate;
-  }
-
-  .x3 {
-    left: 140px;
-    transform: scale(0.4);
-    opacity: 0.7;
-    animation: floatingbubbles 12s linear infinite,
-      sideWays 7s ease-in-out infinite alternate;
-  }
-
-  .x4 {
-    left: 210px;
-    transform: scale(0.7);
-    opacity: 0.4;
-    animation: floatingbubbles 8s linear infinite,
-      sideWays 5s ease-in-out infinite alternate;
-  }
-
-  .x5 {
-    left: 330px;
-    transform: scale(0.5);
-    opacity: 0.6;
-    animation: floatingbubbles 12s linear infinite,
-      sideWays 1s ease-in-out infinite alternate;
-  }
-
-  @keyframes floatingbubbles {
-    0% {
-      opacity: 0;
-      top: 250px;
-    }
-    10% {
-      top: 225px;
+    30% {
+      top: 150px;
       opacity: 0.6;
     }
     90% {
@@ -245,14 +147,48 @@
 
   @keyframes sideWays {
     0% {
-      margin-left: 0px;
+      margin-left: random(10) + px;
+    }
+    50% {
+      margin-left: random(200) + px;
     }
     100% {
-      margin-left: 50px;
+      margin-right: random(50) + px;
     }
   }
   /* bubbles animation ends */
+}
 
+@media only screen and (max-width: a.$tablet-breakpoint) {
+  .x1 {
+    left: 30px;
+    transform: scale(0.6);
+    opacity: 0.5;
+  }
 
+  .x2 {
+    left: 25px;
+    @include a.prefix(transform, scale(0.9), ms webkit moz);
 
+    opacity: 0.2;
+  }
+
+  .x3 {
+    left: 30px;
+    @include a.prefix(transform, scale(0.4), ms webkit moz);
+
+    opacity: 0.8;
+  }
+
+  .x4 {
+    left: 40px;
+    @include a.prefix(transform, scale(0.7), ms webkit moz);
+  }
+
+  .x5 {
+    left: 15px;
+    @include a.prefix(transform, scale(0.5), ms webkit moz);
+
+    opacity: 0.6;
+  }
 }
