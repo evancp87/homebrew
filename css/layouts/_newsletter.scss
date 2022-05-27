@@ -8,7 +8,7 @@
   padding: 1px;
 }
 
-.newsletter-form {
+.subscribe__newsletter-form {
   margin: 0 auto;
   padding: 0;
   color: a.$amber;
@@ -21,12 +21,12 @@
 
   margin: 1em 0 0 0;
 
-  .input {
+  .subscribe__input {
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
 
-    .input-fields {
+    .subscribe__input-fields {
       margin-left: 0;
       margin-top: 1em;
     }
@@ -42,23 +42,23 @@
 //     margin-bottom: 3em;
 //   }
 
-.subscribe .input[type="email"] + input[type="button"] {
+.subscribe .subscribe__input[type="email"] + input[type="button"] {
   margin: 0;
 }
 
 @media only screen and (min-width: a.$tablet-breakpoint) {
-  .newsletter-form {
+  .subscribe__newsletter-form {
     // margin: 0 auto;
     padding: 0;
     color: a.$amber;
     // max-width: 1170px;
     @include a.flexbox-config($flex-direction: row, $justify-content: center);
 
-    .input {
+    .subscribe__input {
       flex-direction: row;
       margin-right: 0.5em;
 
-      .input-fields {
+      .subscribe__input-fields {
         margin-left: 1em;
         margin-top: 0;
       }
@@ -67,7 +67,7 @@
 }
 
 @media only screen and (max-width: a.$sm-mobile-breakpoint) {
-  .input-fields input[type="email"] {
+  .subscribe__input-fields input[type="email"] {
     max-width: 100px;
   }
 }

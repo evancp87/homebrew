@@ -47,8 +47,8 @@
 
   <header class="about-header">
 
-    <div class="header-text">
-      <h1 class="header-title"><span>
+    <div class="about-header__text">
+      <h1 class="about-header__title"><span>
           Our</span><span> Story</span></h1>
 
 
@@ -56,27 +56,29 @@
   </div>
 
   <main class='our-story-main'>
-    <section class='about-us-txt'>
-      <div class="about-article">
+    <section class='about-us__txt'>
+      <div class="about__article">
 
-        <p class="about-copy">
+        <p class="about-us__copy">
           Hi, my name is Evan, and i love beer! Due to worldwide events in 2020 you may be familiar with, beer was in
           short supply throughout much of the UK. I could've simply stocked up on crates and crates of beer, or have
           gone without for months on end. Neither was an option I was willing to accept.</p>
 
-        <p class="about-copy">Lockdown was pretty lonely, and the days long. Work was pretty tough going and I needed to
+        <p class="about-us__copy">Lockdown was pretty lonely, and the days long. Work was pretty tough going and I
+          needed to
           fill my evenings
           with activities to stay sane. My friends were in a similar situation, and after many boozy zoom calls we came
           up with the idea of brewing our own beer to beat the drinks drought.</p>
 
-        <p class="about-copy">
+        <p class="about-us__copy">
           We decided to set ourselves a lockdown project around brewing beer. We would each learn how to brew beers, try
           different recipes and post them to eachother to sample and review on a weekly basis. Of course the first few
           batches were undrinkable, but we kept at it until we felt proud of our beers. Lockdown may have ended, but we
           decided to keep that same energy going.
         </p>
 
-        <p class="about-copy">We became confident enough with our own brewing skills that we were able to quit our day
+        <p class="about-us__copy">We became confident enough with our own brewing skills that we were able to quit our
+          day
           jobs, and sell a
           small range of our individual homemade beer recipes. Although we're still a small startup, our ambitions were
           set high, and we have progressed to the point where our beers are stocked in small craft beer shops, we have
@@ -88,11 +90,12 @@
 
 
 
-        <p class='about-copy'>
+        <p class='about-us__copy'>
           Love from - "The HomeBrew Crew" </p>
 
       </div>
-      <picture class="beer-photo"><img src="../Images/512px-Friends_cheers.jpg" alt="Friends giving cheers"></picture>
+      <picture class="about-us__beer-photo"><img src="../Images/512px-Friends_cheers.jpg" alt="Friends giving cheers">
+      </picture>
 
       </div>
     </section>
@@ -102,11 +105,11 @@
     <section class="subscribe ">
       <div>
 
-        <form class="newsletter-form" action="https://formspree.io/f/mqkwlnod" method="POST">
-          <div class='input'>
+        <form class="subscribe__newsletter-form" action="https://formspree.io/f/mqkwlnod" method="POST">
+          <div class='subscribe__input'>
             <label for="email">News, Recipes & much more!</label>
 
-            <div class='input-fields'>
+            <div class='subscribe__input-fields'>
 
               <input id="email" name="email" type="email" placeholder="Your email" required>
               <input type="button" value="Submit" />
@@ -118,53 +121,54 @@
     </section>
   </main>
 
+
   <footer class="footer footer--gradient">
     <div class="footer__l-footer">
-      <h2>
+      <h2 class="footer__heading">
         Homebrew</h2>
     </div>
     <ul class="footer__r-footer">
       <li>
-        <h2>
+        <h2 class="footer__heading">
           Social</h2>
         <ul class="footer__box footer__box--social-media">
 
-          <li><a href="https://twitter.com/?lang=en-gb" target="_blank">
+          <li class="footer__box-item"><a href="https://twitter.com/?lang=en-gb" target="_blank">
               <picture><img src="../Images/Twitter.png"></picture>
             </a></li>
-          <li><a href="https://www.facebook.com/" target="_blank">
+          <li class="footer__box-item"><a href="https://www.facebook.com/" target="_blank">
               <picture><img src="../Images/facebook-512.png"></picture>
             </a></li>
-          <li><a href="https://www.instagram.com/" target="_blank">
+          <li class="footer__box-item"><a href="https://www.instagram.com/" target="_blank">
               <picture><img src="../Images/Instagram.png"></picture>
             </a></li>
 
         </ul>
       </li>
       <li class="footer__features">
-        <h2>
+        <h2 class="footer__heading">
           Links</h2>
         <ul class="footer__box footer__box--h-box">
-          <li><a href="./our-story/index.html">Our Story</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="./boxes/index.html">Boxes</a></li>
-          <li><a href="./how-to-homebrew/index.html">How to HomeBrew</a></li>
-          <li><a href="#">Subscribe</a></li>
+          <li class="footer__box-item"><a href="./our-story/index.html">Our Story</a></li>
+          <li class="footer__box-item"><a href="#">Shop</a></li>
+          <li class="footer__box-item"><a href="./boxes/index.html">Boxes</a></li>
+          <li class="footer__box-item"><a href="./how-to-homebrew/index.html">How to HomeBrew</a></li>
+          <li class="footer__box-item"><a href="#">Subscribe</a></li>
         </ul>
       </li>
       <li>
-        <h2>
+        <h2 class="footer__heading">
           Features</h2>
         <ul class="footer__box">
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="#">Careers</a></li>
+          <li class="footer__box-item"><a href="#">Blog</a></li>
+          <li class="footer__box-item"><a href="#">Press</a></li>
+          <li class="footer__box-item"><a href="#">Careers</a></li>
         </ul>
       </li>
     </ul>
     <div class="footer__b-footer">
       <p class="footer__copyright">
-        Copyright ©HomeBrew 2021 </p>
+      </p>
     </div>
 
     <div id="bubbles">
@@ -172,10 +176,14 @@
       <div class="bubble x2"></div>
       <div class="bubble x3"></div>
       <div class="bubble x4"></div>
+      <div class="bubble x5"></div>
     </div>
+
 
     </div>
   </footer>
+
+
 
   <!-- animated modal -->
   <div id="animatedModal">

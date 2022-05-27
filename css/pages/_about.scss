@@ -21,12 +21,12 @@
   height: 100vh;
 }
 
-.header-text {
+.about-header__text {
   width: 200px;
   position: absolute;
   left: 15%;
   top: 50%;
-  .header-title {
+  .about-header__title {
     :nth-child(1) {
       color: a.$amber;
     }
@@ -42,15 +42,15 @@
   padding: 3em;
 }
 
-.about-article {
+.about__article {
   padding: 1em;
 
-  .about-copy {
+  .about-us__copy {
     margin: 1em 0;
   }
 }
 
-.beer-photo > img {
+.about-us__beer-photo > img {
   border-radius: 50%;
   width: 150px;
   height: auto;
@@ -60,7 +60,7 @@
   margin-bottom: 1em;
 }
 
-.about-us-txt {
+.about-us__txt {
   margin: 3em;
   background: a.$white;
 }
@@ -84,7 +84,7 @@
     position: relative;
   }
 
-  .header-text {
+  .about-header__text {
     width: 300px;
     position: absolute;
 
@@ -95,18 +95,18 @@
     white-space: nowrap;
   }
 
-  .about-us-txt {
+  .about-us__txt {
     margin: 2em 10em;
   }
 
-  .about-article {
+  .about-us__article {
     padding: 3em;
 
-    .about-copy {
+    .about-us__copy {
       margin: 1em 0;
     }
   }
-  .beer-photo > img {
+  .about-us__beer-photo > img {
     width: 300px;
     max-width: 300px;
   }
@@ -118,7 +118,7 @@
 }
 
 @media only screen and (min-width: a.$header-text-tweakpoint) {
-  .header-text {
+  .about-header__header-text {
     left: 3%;
   }
 }

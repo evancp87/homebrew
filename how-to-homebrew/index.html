@@ -15,14 +15,12 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
   <link rel="stylesheet" href="../plugins/normalize.min.css">
   <link rel="stylesheet" href="../plugins/animate.min.css">
-  <!-- <link rel="stylesheet" href="../css/global.css" />
-  <link rel="stylesheet" href="./howto.css" /> -->
+
   <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
 <body>
-
   <nav class='nav-b' id="nav-bar">
 
     <ul>
@@ -45,19 +43,19 @@
     </div>
   </nav>
 
-  <main>
-    <section class="video-container">
+  <main class="video">
+    <section class="video__container">
 
-      <div class="video-text">
+      <div class="video__text">
 
-        <h1 class='how-to-header'>How to HomeBrew</h1>
+        <h1 class='video__how-to-header'>How to HomeBrew</h1>
         <p>Find out just how easy it is to HomeBrew, through brewing Guru, Joshua Weissmann!</p>
       </div>
-      <div class="iframe-width-wrapper">
+      <div class="video__iframe-width-wrapper">
 
-        <div class="iframe-container">
+        <div class="video__iframe-container">
 
-          <iframe class='video' width="1000" height="315" src="https://www.youtube.com/embed/AVV3UJCFnA4"
+          <iframe class='video__player' width="1000" height="315" src="https://www.youtube.com/embed/AVV3UJCFnA4"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
@@ -68,11 +66,11 @@
     <section class="subscribe ">
       <div>
 
-        <form class="newsletter-form" action="https://formspree.io/f/mqkwlnod" method="POST">
-          <div class='input'>
+        <form class="subscribe__newsletter-form" action="https://formspree.io/f/mqkwlnod" method="POST">
+          <div class='subscribe__input'>
             <label for="email">News, Recipes & much more!</label>
 
-            <div class='input-fields'>
+            <div class='subscribe__input-fields'>
 
               <input id="email" name="email" type="email" placeholder="Your email" required>
               <input type="button" value="Submit" />
@@ -84,53 +82,54 @@
     </section>
   </main>
 
+
   <footer class="footer footer--gradient">
     <div class="footer__l-footer">
-      <h2>
+      <h2 class="footer__heading">
         Homebrew</h2>
     </div>
     <ul class="footer__r-footer">
       <li>
-        <h2>
+        <h2 class="footer__heading">
           Social</h2>
         <ul class="footer__box footer__box--social-media">
 
-          <li><a href="https://twitter.com/?lang=en-gb" target="_blank">
+          <li class="footer__box-item"><a href="https://twitter.com/?lang=en-gb" target="_blank">
               <picture><img src="../Images/Twitter.png"></picture>
             </a></li>
-          <li><a href="https://www.facebook.com/" target="_blank">
+          <li class="footer__box-item"><a href="https://www.facebook.com/" target="_blank">
               <picture><img src="../Images/facebook-512.png"></picture>
             </a></li>
-          <li><a href="https://www.instagram.com/" target="_blank">
+          <li class="footer__box-item"><a href="https://www.instagram.com/" target="_blank">
               <picture><img src="../Images/Instagram.png"></picture>
             </a></li>
 
         </ul>
       </li>
       <li class="footer__features">
-        <h2>
+        <h2 class="footer__heading">
           Links</h2>
         <ul class="footer__box footer__box--h-box">
-          <li><a href="./our-story/index.html">Our Story</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="./boxes/index.html">Boxes</a></li>
-          <li><a href="./how-to-homebrew/index.html">How to HomeBrew</a></li>
-          <li><a href="#">Subscribe</a></li>
+          <li class="footer__box-item"><a href="./our-story/index.html">Our Story</a></li>
+          <li class="footer__box-item"><a href="#">Shop</a></li>
+          <li class="footer__box-item"><a href="./boxes/index.html">Boxes</a></li>
+          <li class="footer__box-item"><a href="./how-to-homebrew/index.html">How to HomeBrew</a></li>
+          <li class="footer__box-item"><a href="#">Subscribe</a></li>
         </ul>
       </li>
       <li>
-        <h2>
+        <h2 class="footer__heading">
           Features</h2>
         <ul class="footer__box">
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="#">Careers</a></li>
+          <li class="footer__box-item"><a href="#">Blog</a></li>
+          <li class="footer__box-item"><a href="#">Press</a></li>
+          <li class="footer__box-item"><a href="#">Careers</a></li>
         </ul>
       </li>
     </ul>
     <div class="footer__b-footer">
       <p class="footer__copyright">
-        Copyright ©HomeBrew 2021 </p>
+      </p>
     </div>
 
     <div id="bubbles">
@@ -138,11 +137,12 @@
       <div class="bubble x2"></div>
       <div class="bubble x3"></div>
       <div class="bubble x4"></div>
+      <div class="bubble x5"></div>
     </div>
+
 
     </div>
   </footer>
-
 
   <!-- animated modal -->
   <div id="animatedModal">
@@ -259,6 +259,13 @@
     });
   </script>
   <script src="../Scripts/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#footer").load("./footer.html");
+    });
+  </script>
+
 </body>
 
 </html>

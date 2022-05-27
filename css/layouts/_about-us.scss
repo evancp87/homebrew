@@ -11,7 +11,7 @@
   margin-top: 1em;
   margin-bottom: 2em;
 
-  .about-blurb {
+  .about-us__blurb {
     font-size: 1rem;
 
     :nth-child(1) {
@@ -24,8 +24,8 @@
   }
 }
 
-.grid-row {
-  .grid-half {
+.features__grid-row {
+  .features__grid-column--grid-half {
     @include a.flexbox-config(
       $flex-direction: column,
       $justify-content: center,
@@ -33,7 +33,7 @@
     );
     margin-top: 3em;
 
-    > .grid-column-text {
+    > .features__grid-column-text {
       margin: 0 1em 2em 2em;
       font-weight: 400;
       color: a.$amber;
@@ -41,17 +41,17 @@
   }
 }
 /* for Javascript image transistions */
-.js-scroll {
+.features__grid-row--js-scroll {
   opacity: 0;
   transition: opacity 500ms;
 }
 
-.js-scroll.scrolled {
+.features__grid-row--js-scroll.scrolled {
   opacity: 1;
 }
 
 //   * main sections */
-.shop .boxes .how-to {
+.features__shop .features__boxes .features__how-to {
   text-align: center;
   display: inline-block;
   align-items: center;
@@ -59,7 +59,7 @@
 
 // on scroll animations for mobile devices
 
-.scrolled.fade-in-bottom {
+.scrolled.features__grid-row--fade-in-bottom {
   -webkit-animation: fade-in-bottom 1s ease-in-out;
   -moz-animation: fade-in-bottom 1s ease-in-out;
   -ms-animation: fade-in-bottom 1s ease-in-out;
@@ -84,17 +84,17 @@
 
 @media only screen and (min-width: a.$tablet-breakpoint) {
   /* for stories section grid styling and order */
-  .grid-row {
+  .features__grid-row {
     @include a.flexbox-config($flex-direction: row);
 
-    .grid-column {
+    .features__grid-column {
       flex-grow: 1;
       flex-shrink: 1;
       flex-basis: auto;
       margin: 0;
     }
 
-    .grid-half {
+    .features__grid-column--grid-half {
       max-width: 50%;
       @include a.flexbox-config(
         $flex-direction: column,
@@ -103,7 +103,7 @@
       );
       margin-top: 0;
 
-      > .grid-column-text {
+      > .features__grid-column-text {
         margin: 0 2em 1em 2em;
         font-weight: 400;
         color: a.$amber;
@@ -112,23 +112,23 @@
   }
 
   // setting order of grid sections for images and text
-  .first-order {
+  .features__grid-column--first-order {
     order: 0;
   }
 
-  .second-order {
+  .features__grid-column--second-order {
     order: 1;
   }
 
   // js scroll animations for grid sections
-  .scrolled.slide-left {
+  .scrolled.features__grid-row--slide-left {
     -webkit-animation: slide-in-left 1s ease-in-out both;
     -moz-animation: slide-in-left 1s ease-in-out both;
     -ms-animation: slide-in-left 1s ease-in-out both;
     animation: slide-in-left 1s ease-in-out both;
   }
 
-  .scrolled.slide-right {
+  .scrolled.features__grid-row--slide-right {
     -webkit-animation: slide-in-right 1s ease-in-out both;
     -moz-animation: slide-in-right 1s ease-in-out both;
     -ms-animation: slide-in-right 1s ease-in-out both;
@@ -172,7 +172,7 @@
   .about-us {
     padding: 7rem;
 
-    .about-blurb {
+    .about-us__blurb {
       font-size: 2em;
     }
   }

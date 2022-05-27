@@ -1,25 +1,25 @@
 @use '../abstracts' as a;
 
-.video-text {
+.video__text {
   margin-bottom: 2rem;
 }
 
-.how-to-header {
+.video__how-to-header {
   color: a.$amber;
   margin-top: 5rem;
 }
 
-.iframe-width-wrapper {
+.video__iframe-width-wrapper {
   max-width: 1000px;
 }
 
-.iframe-container {
+.video__iframe-container {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
 }
 
-.iframe-container iframe {
+.video__iframe-container iframe {
   position: absolute;
   top: 0;
   left: 0;

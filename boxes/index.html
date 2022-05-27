@@ -48,12 +48,12 @@
     </div>
   </nav>
 
-  <main>
+  <main class="boxes">
 
-    <header class='boxes-header'>
+    <header class='boxes__header'>
 
 
-      <h1 class='boxes-heading'>Boxes</h1>
+      <h1 class='boxes__heading'>Boxes</h1>
       <h2>Stop buying expensive beer and start HomeBrewing today!</h2>
       <p>Our starter kits will get you up and brewing in no time, supplying you with all the tools, and different
         combinations of hops, spices, and other ingredients. For those who want to skip the brewing and drink beer, try
@@ -61,30 +61,30 @@
 
     </header>
 
-    <section class='boxes-wrapper'>
+    <section class='boxes__wrapper'>
 
-      <div class="carousel-grid-column carousel-grid-row ">
+      <div class="boxes__carousel-grid-column boxes__carousel-grid-row ">
 
 
-        <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-          <div class="carousel-cell">
+        <div class="boxes__main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+          <div class="boxes__carousel-cell">
             <picture><img src="../Images/Home-brewing_set.jpg" alt="HomeBrew Starter Kit 1" />
             </picture>
           </div>
-          <div class="carousel-cell">
+          <div class="boxes__carousel-cell">
             <picture><img src="../Images/home-brewing-set-2.jpg" alt="HomeBrew Starter Kit 2" />
             </picture>
           </div>
-          <div class="carousel-cell">
+          <div class="boxes__carousel-cell">
             <picture><img src="../Images/home-brewing-set-3.jpg" alt="HomeBrew Starter Kit 3" />
             </picture>
           </div>
 
         </div>
-        <div class="carousel-content">
+        <div class="boxes__carousel-content">
 
           <h3>Starter Kits</h3>
-          <div class='content-details'>
+          <div class='boxes__content-details'>
 
             <p>A range of starter kits to get you started. These can roll onto monthly subscriptions</p>
             <p>Basic Starter Kit: Brewing equipment and guides only</p>
@@ -100,28 +100,28 @@
       <div>
 
       </div>
-      <div class="carousel-grid-column carousel-grid-row grid-half ">
+      <div class="boxes__carousel-grid-column boxes__carousel-grid-row  ">
 
 
-        <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-          <div class="carousel-cell">
+        <div class="boxes__main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+          <div class="boxes__carousel-cell">
             <picture><img src="../Images/box-3.jpg" alt="HomeBrew Box 1" />
             </picture>
           </div>
-          <div class="carousel-cell">
+          <div class="boxes__carousel-cell">
             <picture><img src="../Images/box-2.jpg" alt="HomeBrew Box 2" />
             </picture>
           </div>
-          <div class="carousel-cell">
+          <div class="boxes__carousel-cell">
             <picture><img src="../Images/box-1.jpg" alt="HomeBrew Box 3" />
             </picture>
           </div>
         </div>
 
-        <div class="carousel-content">
+        <div class="boxes__carousel-content">
 
           <h3>Brewer's Delight</h3>
-          <div class='content-details'>
+          <div class='boxes__content-details'>
 
             <p>Already an established HomeBrewer, but want to try new recipes? Find recipe books, ingredients, tips and
               more
@@ -139,27 +139,27 @@
       <div>
 
       </div>
-      <div class="carousel-grid-column carousel-grid-row grid-half ">
+      <div class="boxes__carousel-grid-column boxes__carousel-grid-row ">
 
 
-        <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-          <div class="carousel-cell">
+        <div class="boxes__main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "resize": true }'>
+          <div class="boxes__carousel-cell">
             <picture><img src="../Images/beer-box-3.jpg" alt="HomeBrew Beer Box 1" />
             </picture>
           </div>
-          <div class="carousel-cell">
+          <div class="boxes__carousel-cell">
             <picture><img src="../Images/beer-box-2.jpg" alt="HomeBrew Beer Box 2" />
             </picture>
           </div>
-          <div class="carousel-cell">
+          <div class="boxes__carousel-cell">
             <picture><img src="../Images/beer-box-1.jpg" alt="HomeBrew Beer Box 3" />
             </picture>
           </div>
         </div>
-        <div class="carousel-content">
+        <div class="boxes__carousel-content">
 
           <h3>HomeBrew Beer Boxes</h3>
-          <div class='content-details'>
+          <div class='boxes__content-details'>
 
             <p>Not interested in brewing, but like beer? Discover our range of beers, with a beer of the month, guest
               international beers, snacks and merchandise</p>
@@ -172,14 +172,15 @@
 
       </div>
     </section>
+
     <section class="subscribe ">
       <div>
 
-        <form class="newsletter-form" action="https://formspree.io/f/mqkwlnod" method="POST">
-          <div class='input'>
+        <form class="subscribe__newsletter-form" action="https://formspree.io/f/mqkwlnod" method="POST">
+          <div class='subscribe__input'>
             <label for="email">News, Recipes & much more!</label>
 
-            <div class='input-fields'>
+            <div class='subscribe__input-fields'>
 
               <input id="email" name="email" type="email" placeholder="Your email" required>
               <input type="button" value="Submit" />
@@ -192,53 +193,54 @@
 
   </main>
 
+
   <footer class="footer footer--gradient">
     <div class="footer__l-footer">
-      <h2>
+      <h2 class="footer__heading">
         Homebrew</h2>
     </div>
     <ul class="footer__r-footer">
       <li>
-        <h2>
+        <h2 class="footer__heading">
           Social</h2>
         <ul class="footer__box footer__box--social-media">
 
-          <li><a href="https://twitter.com/?lang=en-gb" target="_blank">
+          <li class="footer__box-item"><a href="https://twitter.com/?lang=en-gb" target="_blank">
               <picture><img src="../Images/Twitter.png"></picture>
             </a></li>
-          <li><a href="https://www.facebook.com/" target="_blank">
+          <li class="footer__box-item"><a href="https://www.facebook.com/" target="_blank">
               <picture><img src="../Images/facebook-512.png"></picture>
             </a></li>
-          <li><a href="https://www.instagram.com/" target="_blank">
+          <li class="footer__box-item"><a href="https://www.instagram.com/" target="_blank">
               <picture><img src="../Images/Instagram.png"></picture>
             </a></li>
 
         </ul>
       </li>
       <li class="footer__features">
-        <h2>
+        <h2 class="footer__heading">
           Links</h2>
         <ul class="footer__box footer__box--h-box">
-          <li><a href="./our-story/index.html">Our Story</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="./boxes/index.html">Boxes</a></li>
-          <li><a href="./how-to-homebrew/index.html">How to HomeBrew</a></li>
-          <li><a href="#">Subscribe</a></li>
+          <li class="footer__box-item"><a href="./our-story/index.html">Our Story</a></li>
+          <li class="footer__box-item"><a href="#">Shop</a></li>
+          <li class="footer__box-item"><a href="./boxes/index.html">Boxes</a></li>
+          <li class="footer__box-item"><a href="./how-to-homebrew/index.html">How to HomeBrew</a></li>
+          <li class="footer__box-item"><a href="#">Subscribe</a></li>
         </ul>
       </li>
       <li>
-        <h2>
+        <h2 class="footer__heading">
           Features</h2>
         <ul class="footer__box">
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="#">Careers</a></li>
+          <li class="footer__box-item"><a href="#">Blog</a></li>
+          <li class="footer__box-item"><a href="#">Press</a></li>
+          <li class="footer__box-item"><a href="#">Careers</a></li>
         </ul>
       </li>
     </ul>
     <div class="footer__b-footer">
       <p class="footer__copyright">
-        Copyright ©HomeBrew 2021 </p>
+      </p>
     </div>
 
     <div id="bubbles">
@@ -246,11 +248,12 @@
       <div class="bubble x2"></div>
       <div class="bubble x3"></div>
       <div class="bubble x4"></div>
+      <div class="bubble x5"></div>
     </div>
+
 
     </div>
   </footer>
-
   <!-- animated modal -->
   <div id="animatedModal">
     <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->

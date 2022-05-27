@@ -100,6 +100,7 @@ input[type="submit"]:hover {
   .modal-content {
     @include a.flexbox-config($flex-direction: row);
     padding-left: 3em;
+    margin-top: 10em;
   }
   .form-item {
     flex-direction: row;

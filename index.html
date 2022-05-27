@@ -17,11 +17,9 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awseome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="./css/style.css">
-  <!-- <link rel="stylesheet" href="./css/main.css" /> -->
 </head>
 
 <body>
-
 
   <nav class='nav-b' id="nav-bar">
 
@@ -45,14 +43,15 @@
     </div>
   </nav>
 
-  <header class="header-img">
+  <header class="header">
 
 
-    <div class='homepage-header-text'>
+    <div class='header__text'>
 
-      <h1 class='tagline'>We do what we do,
+      <h1 class='header__tagline'>We do what we do,
         so you can HomeBrew!</h1>
-      <p class='consumer-question'>Did you know that brewing your own beer is really easy? Let us help you with our
+      <p class='header__consumer-question'>Did you know that brewing your own beer is really easy? Let us help you with
+        our
         range of starter kits,
         boxes, and our shop of own brand beer!</p>
 
@@ -68,7 +67,7 @@
 
     <section class="about-us">
 
-      <div class='about-blurb'>
+      <div class='about-us__blurb'>
         <h2>About us
         </h2>
         <p>HomeBrew began as a covid-19 pandemic lockdown project between 4 likeminded friends. Not open? No problem! We
@@ -79,108 +78,122 @@
       <button class='btn'><a href="./our-story/index.html">Our Story</a></button>
     </section>
 
-    <section class="grid-row js-scroll fade-in-bottom slide-right">
-      <div class="grid-column grid-half">
-        <picture> <img src="./Images/Circusbeer.JPG" alt="Circus Beer" />
+    <section class="features">
+
+      <div
+        class="features__grid-row features__grid-row--js-scroll features__grid-row--fade-in-bottom features__grid-row--slide-right">
+        <div class="features__grid-column features__grid-column--grid-half">
+          <picture> <img src="./Images/Circusbeer.JPG" alt="Circus Beer" />
+        </div>
+
+        <div class="features__grid-column features__grid-column--grid-half">
+          <p class="features__grid-column-text"> Ordering from us couldn't be any easier </p>
+          <button class='btn'><a href="#">How it works</a></button>
+        </div>
+
       </div>
 
-      <div class="grid-column grid-half">
-        <p class="grid-column-text"> Ordering from us couldn't be any easier </p>
-        <button class='btn'><a href="#">How it works</a></button>
+      <div
+        class="features__shop features__grid-row features__grid-row--js-scroll features_grid-row--fade-in-bottom features__grid-row--slide-left">
+        <div class="features__grid-column features__grid-column--grid-half features__grid-column--second-order">
+          <picture><img src="./Images/bottles.png" alt="bottles" />
+          </picture>
+        </div>
+        <div class="features__grid-column features__grid-column--grid-half features__grid-column--first-order">
+
+          <p class="features__grid-column-text">Browse our range of homemade beers</p>
+          <button class='btn'>Shop</button>
+        </div>
       </div>
+
+      <div
+        class="features__boxes features__grid-row features__grid-row--js-scroll features__grid-row--fade-in-bottom features__grid-row--slide-right">
+        <div class="features__grid-column features__grid-column--grid-half ">
+          <picture><img src="./Images/Lavenderbeer.JPG" alt="HomeBrew in Lavender Bush" />
+          </picture>
+        </div>
+        <div class="features__grid-column features__grid-column--grid-half">
+
+          <p class="features__grid-column-text">Learn how to brew beer with our range of starter kits, monthly beer
+            boxes, and
+            more
+          </p>
+          <button class='btn'><a href="./boxes/index.html">Browse our boxes</a></button>
+        </div>
+
+
+      </div>
+
+
+      <div
+        class="features__how-to features__grid-row features__grid-row--js-scroll features__grid-row--fade-in-bottom features__grid-row--slide-left">
+        <div class="features__grid-column features__grid-column--grid-half features__grid-column--second-order">
+          <picture>
+            <img src="./Images/brewerysetup.JPG" alt="HomeBrew Setup">
+          </picture>
+        </div>
+        <div class="features__grid-column features__grid-column--grid-half features__grid-column--first-order">
+
+          <p class="features__grid-column-text">
+            You can HomeBrew too! Find out how here.
+
+          </p>
+          <button class='btn'><a href="./how-to-homebrew/index.html">How to Homebrew</a></button>
+
+        </div>
+      </div>
+
 
     </section>
-
-    <section class="shop grid-row js-scroll fade-in-bottom slide-left">
-      <div class="grid-column grid-half second-order">
-        <picture><img src="./Images/bottles.png" alt="bottles" />
-        </picture>
-      </div>
-      <div class="grid-column grid-half first-order">
-
-        <p class="grid-column-text">Browse our range of homemade beers</p>
-        <button class='btn'>Shop</button>
-      </div>
-    </section>
-
-    <section class="boxes grid-row js-scroll fade-in-bottom slide-right">
-      <div class="grid-column grid-half ">
-        <picture><img src="./Images/Lavenderbeer.JPG" alt="HomeBrew in Lavender Bush" />
-        </picture>
-      </div>
-      <div class="grid-column grid-half">
-
-        <p class="grid-column-text">Learn how to brew beer with our range of starter kits, monthly beer boxes, and more
-        </p>
-        <button class='btn'><a href="./boxes/index.html">Browse our boxes</a></button>
-      </div>
-
-
-    </section>
-
-
-    <section class="how-to grid-row js-scroll fade-in-bottom slide-left">
-      <div class="grid-column grid-half second-order">
-        <picture>
-          <img src="./Images/brewerysetup.JPG" alt="HomeBrew Setup">
-        </picture>
-      </div>
-      <div class="grid-column grid-half first-order">
-
-        <p class="grid-column-text">
-          You can HomeBrew too! Find out how here.
-
-        </p>
-        <button class='btn'><a href="./how-to-homebrew/index.html">How to Homebrew</a></button>
-
-      </div>
-    </section>
-
-
 
     <section class="stories">
-      <ul>
-        <li class="img-wrap"><img src="./Images/carousel1.jpg" alt="Beers lined up">
-          <p class="img-description">"I never knew it was so easy to brew before i tried HomeBrew!" -James, Brighton</p>
+      <ul class="stories__container">
+        <li class="stories__img-wrap"><img src="./Images/carousel1.jpg" alt="Beers lined up">
+          <p class="stories__img-description">"I never knew it was so easy to brew before i tried HomeBrew!" -James,
+            Brighton</p>
         </li>
 
-        <li class="img-wrap"><img src="./Images/carousel2 .JPG" alt="Friends Drinking">
-          <p class="img-description">"Great value for money" -Karl, Newcastle</p>
+        <li class="stories__img-wrap"><img src="./Images/carousel2 .JPG" alt="Friends Drinking">
+          <p class="stories__img-description">"Great value for money" -Karl, Newcastle</p>
         </li>
 
-        <li class="img-wrap"><img src="./Images/carousel3.jpg" alt="Beer Glasses">
-          <p class="img-description">"My home has basically become a bar!" - Jonah, Nottingham</p>
+        <li class="stories__img-wrap"><img src="./Images/carousel3.jpg" alt="Beer Glasses">
+          <p class="stories__img-description">"My home has basically become a bar!" - Jonah, Nottingham</p>
         </li>
 
-        <li class="img-wrap"><img src="./Images/carousel4.JPG" alt="Friends Drinking in Park">
-          <p class="img-description">"I don't think i'll ever be able to buy supermarket beer ever again!" -Christina,
+        <li class="stories__img-wrap"><img src="./Images/carousel4.JPG" alt="Friends Drinking in Park">
+          <p class="stories__img-description">"I don't think i'll ever be able to buy supermarket beer ever again!"
+            -Christina,
             London</p>
         </li>
 
-        <li class="img-wrap"><img src="./Images/carousel8.JPG" alt="A gathering of friends">
-          <p class="img-description">"What started as a hobby has now taken off as a business!" -Christos, London</p>
+        <li class="stories__img-wrap"><img src="./Images/carousel8.JPG" alt="A gathering of friends">
+          <p class="stories__img-description">"What started as a hobby has now taken off as a business!" -Christos,
+            London</p>
         </li>
 
-        <li class="img-wrap"><img src="./Images/carousel6.JPG" alt="Dinner party">
-          <p class="img-description">"Never dreamed of brewing before, thanks for opening my eyes!" -Jasmine, London</p>
+        <li class="stories__img-wrap"><img src="./Images/carousel6.JPG" alt="Dinner party">
+          <p class="stories__img-description">"Never dreamed of brewing before, thanks for opening my eyes!" -Jasmine,
+            London</p>
         </li>
 
-        <li class="img-wrap"><img src="./Images/carousel5.JPG" alt="Canary Wharf Skyline">
-          <p class="img-description">"Easy to use, and i've made great beer" -Craig, Manchester</p>
+        <li class="stories__img-wrap"><img src="./Images/carousel5.JPG" alt="Canary Wharf Skyline">
+          <p class="stories__img-description">"Easy to use, and i've made great beer" -Craig, Manchester</p>
         </li>
 
-        <li class="img-wrap"><img
+        <li class="stories__img-wrap"><img
             src="./Images/friends-toasting-with-beer-glasses-in-the-royalty-free-image-1637621142.jpeg"
             alt="Beer Glasses">
-          <p class="img-description">"If you don't like brewing, their own brand is still highly recommended!"- Lewis,
+          <p class="stories__img-description">"If you don't like brewing, their own brand is still highly recommended!"-
+            Lewis,
             London</p>
         </li>
 
-        <li class="img-wrap"><img src="./Images/cheers.jpeg" alt="Drinks cheers">
-          <p class="img-description">"I have nothing but good words for HomeBrew" Ben, Glasgow</p>
+        <li class="stories__img-wrap"><img src="./Images/cheers.jpeg" alt="Drinks cheers">
+          <p class="stories__img-description">"I have nothing but good words for HomeBrew" Ben, Glasgow</p>
         </li>
-        <li class="img-wrap"><img src="./Images/carousel7.JPG" alt="Friends chilling in the park">
-          <p class="img-description">"Highly recommend, for beer lovers and beer novices!" - Jay, Bristol</p>
+        <li class="stories__img-wrap"><img src="./Images/carousel7.JPG" alt="Friends chilling in the park">
+          <p class="stories__img-description">"Highly recommend, for beer lovers and beer novices!" - Jay, Bristol</p>
         </li>
       </ul>
 
@@ -189,11 +202,11 @@
     <section class="subscribe ">
       <div>
 
-        <form class="newsletter-form" action="https://formspree.io/f/mqkwlnod" method="POST">
-          <div class='input'>
+        <form class="subscribe__newsletter-form" action="https://formspree.io/f/mqkwlnod" method="POST">
+          <div class='subscribe__input'>
             <label for="email">News, Recipes & much more!</label>
 
-            <div class='input-fields'>
+            <div class='subscribe__input-fields'>
 
               <input id="email" name="email" type="email" placeholder="Your email" required>
               <input type="button" value="Submit" />
@@ -213,51 +226,51 @@
 
   <footer class="footer footer--gradient">
     <div class="footer__l-footer">
-      <h2>
+      <h2 class="footer__heading">
         Homebrew</h2>
     </div>
     <ul class="footer__r-footer">
       <li>
-        <h2>
+        <h2 class="footer__heading">
           Social</h2>
         <ul class="footer__box footer__box--social-media">
 
-          <li><a href="https://twitter.com/?lang=en-gb" target="_blank">
+          <li class="footer__box-item"><a href="https://twitter.com/?lang=en-gb" target="_blank">
               <picture><img src="./Images/Twitter.png"></picture>
             </a></li>
-          <li><a href="https://www.facebook.com/" target="_blank">
+          <li class="footer__box-item"><a href="https://www.facebook.com/" target="_blank">
               <picture><img src="./Images/facebook-512.png"></picture>
             </a></li>
-          <li><a href="https://www.instagram.com/" target="_blank">
+          <li class="footer__box-item"><a href="https://www.instagram.com/" target="_blank">
               <picture><img src="./Images/Instagram.png"></picture>
             </a></li>
 
         </ul>
       </li>
       <li class="footer__features">
-        <h2>
+        <h2 class="footer__heading">
           Links</h2>
         <ul class="footer__box footer__box--h-box">
-          <li><a href="./our-story/index.html">Our Story</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="./boxes/index.html">Boxes</a></li>
-          <li><a href="./how-to-homebrew/index.html">How to HomeBrew</a></li>
-          <li><a href="#">Subscribe</a></li>
+          <li class="footer__box-item"><a href="./our-story/index.html">Our Story</a></li>
+          <li class="footer__box-item"><a href="#">Shop</a></li>
+          <li class="footer__box-item"><a href="./boxes/index.html">Boxes</a></li>
+          <li class="footer__box-item"><a href="./how-to-homebrew/index.html">How to HomeBrew</a></li>
+          <li class="footer__box-item"><a href="#">Subscribe</a></li>
         </ul>
       </li>
       <li>
-        <h2>
+        <h2 class="footer__heading">
           Features</h2>
         <ul class="footer__box">
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="#">Careers</a></li>
+          <li class="footer__box-item"><a href="#">Blog</a></li>
+          <li class="footer__box-item"><a href="#">Press</a></li>
+          <li class="footer__box-item"><a href="#">Careers</a></li>
         </ul>
       </li>
     </ul>
     <div class="footer__b-footer">
       <p class="footer__copyright">
-        Copyright ©HomeBrew 2021 </p>
+      </p>
     </div>
 
     <div id="bubbles">
@@ -340,6 +353,7 @@
 
   <script src="./plugins/flickity.pkgd.min.js"> </script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
   <script src="./plugins/animatedModal.min.js"></script>
   <script> $("#demo01").animatedModal();</script>
   <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>

@@ -1,8 +1,8 @@
 @use '../abstracts' as a;
 
 // TODO: build accordion for boxes information or research better UI/UX
-
-.boxes-header {
+// product boxes using the Flickity plugin
+.boxes__header {
   margin: 4rem 0 2rem 0;
   padding: 0;
 
@@ -15,24 +15,24 @@
   }
 }
 
-.boxes-wrapper {
+.boxes__wrapper {
   @include a.flexbox-config($flex-direction: column, $align-items: center);
 }
 /* for carousels */
-.main-carousel {
+.boxes__main-carousel {
   background: a.$light-grey;
   width: 300px;
   margin: 30px;
 }
 
-.carousel-cell {
+.boxes__carousel-cell {
   width: 100%;
   height: 200px;
   background: a.$carousel-green;
   border-radius: 5px;
 }
 
-.carousel-cell:before {
+.boxes__carousel-cell:before {
   display: block;
   text-align: center;
   line-height: 200px;
@@ -40,16 +40,16 @@
   color: a.$white;
 }
 
-.carousel-cell img {
+.boxes__carousel-cell img {
   max-width: 100%;
   height: auto;
 }
 
-.carousel-grid-row {
+.boxes__carousel-grid-row {
   @include a.flexbox-config($flex-direction: column);
 }
 
-.carousel-grid-column {
+.boxes__carousel-grid-column {
   border: 2px solid a.$amber;
   max-width: 400px;
 
@@ -92,7 +92,7 @@
   right: -10px;
 }
 
-.carousel-content {
+.boxes__carousel-content {
   @include a.flexbox-config($flex-direction: column);
 
   padding: 0;
@@ -100,14 +100,14 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .carousel-grid-row {
+  .boxes__carousel-grid-row {
     @include a.flexbox-config($flex-direction: column);
   }
-  .carousel-grid-column {
+  .boxes__carousel-grid-column {
     border: 2px solid a.$amber;
     margin-right: 10px;
   }
-  .boxes-header {
+  .boxes__header {
     margin: 4rem 2rem 2rem 0;
     padding: 0;
 
@@ -116,7 +116,7 @@
     }
   }
 }
-.carousel-content {
+.boxes__carousel-content {
   @include a.flexbox-config($flex-direction: column);
   padding: 2em;
   margin: 2em 0 2em 0;
@@ -124,27 +124,27 @@
   > h3 {
     color: a.$amber;
 
-    + .content-details > * {
+    + .boxes__content-details > * {
       margin: 1em 0 1em 0;
     }
   }
 }
 
 @media only screen and (min-width: a.$boxes-tweakpoint) {
-  .boxes-wrapper {
+  .boxes__wrapper {
     @include a.flexbox-config($flex-direction: row, $align-items: baseline);
   }
 }
 
 @media only screen and (max-width: a.$lg-mobile-breakpoint) {
-  .main-carousel {
+  .boxes__main-carousel {
     width: 75%;
     max-width: 100%;
     object-fit: cover;
     height: auto;
   }
 
-  .carousel-cell {
+  .boxes__carousel-cell {
     width: 100%;
     max-width: 100%;
     height: auto;
