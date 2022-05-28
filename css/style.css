@@ -382,23 +382,23 @@ svg {
 }
 
 .bubble:nth-of-type(1) {
-  animation: floatingbubbles 9.6666666667s linear infinite 2s, sideWays 9s ease-in-out infinite alternate 11s;
+  animation: floatingbubbles 8.6666666667s linear infinite 1s, sideWays 9s ease-in-out infinite alternate 8.5s;
 }
 
 .bubble:nth-of-type(2) {
-  animation: floatingbubbles 9s linear infinite 1.5s, sideWays 11s ease-in-out infinite alternate 9s;
+  animation: floatingbubbles 9s linear infinite 2.5s, sideWays 10s ease-in-out infinite alternate 10.5s;
 }
 
 .bubble:nth-of-type(3) {
-  animation: floatingbubbles 9s linear infinite 3s, sideWays 11.5s ease-in-out infinite alternate 10s;
+  animation: floatingbubbles 9s linear infinite 2.5s, sideWays 10.5s ease-in-out infinite alternate 8.5s;
 }
 
 .bubble:nth-of-type(4) {
-  animation: floatingbubbles 10s linear infinite 1.5s, sideWays 9.5s ease-in-out infinite alternate 10.5s;
+  animation: floatingbubbles 10s linear infinite 1s, sideWays 11s ease-in-out infinite alternate 10.5s;
 }
 
 .bubble:nth-of-type(5) {
-  animation: floatingbubbles 8.6666666667s linear infinite 2s, sideWays 9.5s ease-in-out infinite alternate 9.5s;
+  animation: floatingbubbles 9.3333333333s linear infinite 1s, sideWays 8.5s ease-in-out infinite alternate 9s;
 }
 
 .x1 {
@@ -470,13 +470,13 @@ svg {
 }
 @keyframes sideWays {
   0% {
-    margin-left: 4px;
+    margin-left: 6px;
   }
   50% {
-    margin-left: 81px;
+    margin-left: 96px;
   }
   100% {
-    margin-right: 62px;
+    margin-right: 99px;
   }
 }
 @media only screen and (min-width: 300px) {
@@ -549,13 +549,13 @@ svg {
   }
   @keyframes sideWays {
     0% {
-      margin-left: 5px;
+      margin-left: 2px;
     }
     50% {
-      margin-left: 145px;
+      margin-left: 16px;
     }
     100% {
-      margin-right: 31px;
+      margin-right: 48px;
     }
   }
   /* bubbles animation ends */
@@ -925,6 +925,10 @@ input[type=submit]:hover {
   margin: 1em 2em 0 0;
 }
 
+.flickity-viewport {
+  height: 100%;
+}
+
 .boxes__wrapper {
   display: flex;
   flex-direction: column;
@@ -935,6 +939,7 @@ input[type=submit]:hover {
 .boxes__main-carousel {
   background: #eee;
   width: 300px;
+  height: 200px;
   margin: 30px;
 }
 
@@ -955,7 +960,9 @@ input[type=submit]:hover {
 
 .boxes__carousel-cell img {
   max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .boxes__carousel-grid-row {
@@ -1056,6 +1063,7 @@ input[type=submit]:hover {
   .boxes__main-carousel {
     width: 75%;
     max-width: 100%;
+    height: 300px;
     object-fit: cover;
     height: auto;
   }
@@ -1309,7 +1317,7 @@ main {
 .nav-b .nav-b__nav-menu .nav-b__nav-item {
   cursor: pointer;
   padding: 0.5rem;
-  flex: auto;
+  flex: 0 1 auto;
   text-align: center;
 }
 

@@ -17,10 +17,22 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awseome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#newsletter").load("newsletter.html");
+    });
+  </script>
+
+  <script>
+    $(function () {
+      $("#footer").load("footer.html");
+    });
+  </script>
+
 </head>
 
 <body>
-
   <nav class='nav-b' id="nav-bar">
 
     <ul class='nav-b__logo-container'>
@@ -199,7 +211,8 @@
 
     </section>
 
-    <section class="subscribe ">
+    <div id="newsletter"></div>
+    <!-- <section class="subscribe ">
       <div>
 
         <form class="subscribe__newsletter-form" action="https://formspree.io/f/mqkwlnod" method="POST">
@@ -215,16 +228,16 @@
           </div>
         </form>
       </div>
-    </section>
+    </section> -->
 
   </main>
 
 
 
 
+  <div id="footer"></div>
 
-
-  <footer class="footer footer--gradient">
+  <!-- <footer class="footer footer--gradient">
     <div class="footer__l-footer">
       <h2 class="footer__heading">
         Homebrew</h2>
@@ -283,7 +296,7 @@
 
 
     </div>
-  </footer>
+  </footer> -->
 
   <!-- animated modal -->
   <div id="animatedModal">
@@ -352,7 +365,7 @@
 
 
   <script src="./plugins/flickity.pkgd.min.js"> </script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 
   <script src="./plugins/animatedModal.min.js"></script>
   <script> $("#demo01").animatedModal();</script>
