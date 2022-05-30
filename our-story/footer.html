@@ -10,13 +10,13 @@
       <ul class="footer__box footer__box--social-media">
 
         <li class="footer__box-item"><a href="https://twitter.com/?lang=en-gb" target="_blank">
-            <picture><img src="./Images/Twitter.png"></picture>
+            <picture><img src="../Images/Twitter.png"></picture>
           </a></li>
         <li class="footer__box-item"><a href="https://www.facebook.com/" target="_blank">
-            <picture><img src="./Images/facebook-512.png"></picture>
+            <picture><img src="../Images/facebook-512.png"></picture>
           </a></li>
         <li class="footer__box-item"><a href="https://www.instagram.com/" target="_blank">
-            <picture><img src="./Images/Instagram.png"></picture>
+            <picture><img src="../Images/Instagram.png"></picture>
           </a></li>
 
       </ul>
@@ -58,3 +58,12 @@
 
   </div>
 </footer>
+
+<!-- dynamically generating the copyright year -->
+<script>
+
+  const date = new Date();
+  const year = date.getFullYear();
+  const copyrightYear = document.querySelector(".footer__copyright");
+  copyrightYear.innerHTML = `Copyright ©HomeBrew ${year}`;
+</script>
