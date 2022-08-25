@@ -1,4 +1,4 @@
-@use '../abstracts/' as a;
+@use "../abstracts/" as a;
 
 .header__tagline {
   font-weight: 700;
@@ -8,11 +8,7 @@
 
 /* header */
 .header {
-  @include a.prefix(
-    background-image,
-    url(../images/smallbeer.jpg),
-    ms moz webkit
-  );
+  @include a.prefix(url(../images/smallbeer.jpg), ms moz webkit);
   @include a.prefix(background-size, cover, ms moz webkit);
   @include a.prefix(background-repeat, no-repeat, ms moz webkit);
   @include a.prefix(background-position, top, ms moz webkit);
@@ -60,6 +56,7 @@
   .header {
     @include a.prefix(
       background-image,
+      linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0)),
       url(../Images/Mediumbeer.jpg),
       ms moz webkit
     );
